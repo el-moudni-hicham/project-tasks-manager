@@ -1,9 +1,6 @@
 
 package ma.enset.projet.presentation.controllers;
 
-import com.jfoenix.controls.JFXComboBox;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,8 +16,6 @@ import ma.enset.projet.dao.entites.User;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 
@@ -57,11 +52,11 @@ public class LoginController implements Initializable {
             User user = userDao.checkUser(username, password);
             if(user != null){
                 if(user.getRole().equals("ADMIN")){
-                    Parent menu = FXMLLoader.load(getClass().getResource("../views/AdminDashboard.fxml"));
+                    Parent menu = FXMLLoader.load(getClass().getResource("../views/admin/AdminDashboard.fxml"));
                     content.getChildren().removeAll();
                     content.getChildren().setAll(menu);
                 }else{
-                    Parent menu = FXMLLoader.load(getClass().getResource("../views/UserDashboard.fxml"));
+                    Parent menu = FXMLLoader.load(getClass().getResource("../views/user/UserDashboard.fxml"));
                     content.getChildren().removeAll();
                     content.getChildren().setAll(menu);
                 }
