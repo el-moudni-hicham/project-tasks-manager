@@ -41,7 +41,7 @@
                   </Label>
                   <HBox alignment="CENTER_RIGHT" layoutX="486.0" layoutY="197.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" style="-fx-background-color: transparent; -fx-border-color: #E1E1E1; -fx-border-radius: 50px;">
                      <children>
-                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="221.0" promptText="Enter your username" style="-fx-background-color: transparent;" />
+                        <TextField fx:id="txtUsername" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="221.0" promptText="Enter Your Username" style="-fx-background-color: transparent;" />
                         <FontAwesomeIcon fill="#e1e1e1" iconName="USER" size="1.3em" />
                      </children>
                      <padding>
@@ -50,7 +50,7 @@
                   </HBox>
                   <HBox alignment="CENTER_RIGHT" layoutX="486.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" style="-fx-background-color: transparent; -fx-border-color: #E1E1E1; -fx-border-radius: 50px;">
                      <children>
-                        <PasswordField prefHeight="35.0" prefWidth="218.0" promptText="Enter Your Password" style="-fx-background-color: transparent;" />
+                        <PasswordField fx:id="txtPassword" prefHeight="35.0" prefWidth="218.0" promptText="Enter Your Password" style="-fx-background-color: transparent;" />
                         <FontAwesomeIcon fill="#e1e1e1" iconName="LOCK" size="1.3em" />
                      </children>
                      <padding>
