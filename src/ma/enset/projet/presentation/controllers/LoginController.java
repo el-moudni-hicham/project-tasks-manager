@@ -11,6 +11,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import ma.enset.projet.dao.UserDaoImpl;
 import ma.enset.projet.dao.entites.User;
 
@@ -22,7 +23,8 @@ import java.util.ResourceBundle;
 public class LoginController implements Initializable {
 
     @FXML
-    private AnchorPane parent;
+    private VBox parent;
+
     @FXML
     private Pane content;
 
