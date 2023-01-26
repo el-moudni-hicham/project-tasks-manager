@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="558.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.admin.tasks.TasksController">
+    <children>
+      <VBox prefHeight="558.0" prefWidth="917.0" spacing="30.0">
+         <children>
+                <Label prefHeight="33.0" prefWidth="271.0" text="Tasks">
+                    <font>
+                        <Font name="Corbel Bold" size="28.0" />
+                    </font>
+                </Label>
+            <VBox prefHeight="39.0" prefWidth="708.0">
+               <children>
+                    <Button fx:id="addUser" mnemonicParsing="false" onAction="#addUser" prefHeight="31.0" prefWidth="111.0" style="-fx-background-color: F9A80C; -fx-background-radius: 50;" text="Add Task">
+                        <font>
+                            <Font name="Corbel" size="15.0" />
+                        </font>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                    </Button>
+               </children>
+            </VBox>
+              <TableView prefHeight="326.0" prefWidth="780.0">
+                  <columns>
+                      <TableColumn prefWidth="75.0" text="Name" />
+                      <TableColumn prefWidth="95.0" text="Description" />
+                      <TableColumn prefWidth="140.0" text="Manager" />
+                      <TableColumn prefWidth="188.0" text="Start Date" />
+                      <TableColumn prefWidth="130.0" text="End Date" />
+                      <TableColumn prefWidth="188.0" text="Actions" />
+                  </columns>
+              </TableView>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+         </padding>
+      </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutY="-1.0" prefHeight="638.0" prefWidth="893.0" spacing="20.0">
+         <children>
+            <Label prefHeight="37.0" prefWidth="137.0" text="Add Task" textFill="#1e2753">
+               <font>
+                  <Font name="Corbel Bold" size="32.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="233.0" prefWidth="821.0" spacing="10.0">
+               <children>
+                  <Label text="Task Details">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Pane prefHeight="34.0" prefWidth="217.0" />
+                        <JFXTextField prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Description">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Pane prefHeight="36.0" prefWidth="184.0" />
+                        <JFXTextField prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Start Date">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Pane prefHeight="36.0" prefWidth="192.0" />
+                        <JFXDatePicker prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label text="End Date">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="36.0" prefWidth="197.0" />
+                        <JFXDatePicker prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="83.0" prefWidth="793.0" spacing="10.0">
+               <children>
+                  <Label text="Project">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="25.0" prefWidth="222.0" />
+                        <JFXComboBox prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="83.0" prefWidth="793.0" spacing="10.0">
+               <children>
+                  <Label text="Manager">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="25.0" prefWidth="222.0" />
+                        <JFXComboBox prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="83.0" prefWidth="793.0" spacing="10.0">
+               <children>
+                  <Label text="material resources">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="25.0" prefWidth="222.0" />
+                        <JFXComboBox prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="83.0" prefWidth="793.0" spacing="10.0" />
+            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="89.0" style="-fx-background-color: F9A80C; -fx-background-radius: 50;" text="Ajouter">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
