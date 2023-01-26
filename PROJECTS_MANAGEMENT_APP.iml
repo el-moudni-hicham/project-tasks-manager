@@ -18,6 +18,14 @@
     </orderEntry>
     <orderEntry type="library" name="jfoenix-8.0.10" level="project" />
     <orderEntry type="library" name="fontawesomefx-8.1" level="project" />
-    <orderEntry type="library" name="controlsfx-8.40.11" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/mysql-connector-java-8.0.30.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
