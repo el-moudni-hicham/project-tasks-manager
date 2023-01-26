@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
@@ -12,8 +13,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import ma.enset.projet.dao.UserDaoImpl;
 import ma.enset.projet.dao.entites.User;
+import ma.enset.projet.presentation.controllers.admin.DashboardController;
 
 import java.io.IOException;
 import java.net.URL;
@@ -52,10 +55,13 @@ public class LoginController implements Initializable {
             if(user != null){
                 if(user.getRole().equals("ADMIN")){
                     Parent menu = FXMLLoader.load(getClass().getResource("../views/admin/AdminDashboard.fxml"));
+                    menu.setUserData(user);
                     content.getChildren().removeAll();
                     content.getChildren().setAll(menu);
+                    
                 }else{
                     Parent menu = FXMLLoader.load(getClass().getResource("../views/user/UserDashboard.fxml"));
+                    menu.setUserData(user);
                     content.getChildren().removeAll();
                     content.getChildren().setAll(menu);
                 }

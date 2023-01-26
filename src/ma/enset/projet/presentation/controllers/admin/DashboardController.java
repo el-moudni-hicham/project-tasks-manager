@@ -4,20 +4,28 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import ma.enset.projet.dao.entites.User;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Initializable {
+
     private Parent fxml;
     @FXML
     private AnchorPane parent;
     @FXML
     private Pane root;
+
+    @FXML
+    private Label username;
 
     @FXML
     void home(ActionEvent event) {
@@ -63,6 +71,17 @@ public class DashboardController implements Initializable {
     }
 
     @FXML
+    void materials(ActionEvent event) {
+        try {
+            fxml = FXMLLoader.load(getClass().getResource("../../views/admin/materials/MaterialsView.fxml"));
+            root.getChildren().removeAll();
+            root.getChildren().setAll(fxml);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
     void signOut(ActionEvent event) {
         try {
             fxml = FXMLLoader.load(getClass().getResource("../../views/Login.fxml"));
@@ -72,6 +91,7 @@ public class DashboardController implements Initializable {
             throw new RuntimeException(e);
         }
     }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

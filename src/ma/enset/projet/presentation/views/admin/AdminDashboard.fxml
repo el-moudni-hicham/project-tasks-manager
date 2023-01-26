@@ -40,11 +40,23 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#users" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/style.css" text="Users">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/style.css" text="Users">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/people_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#users" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/style.css" text="Human Resources">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../images/people_32px.png" />
+                        <Image url="@../../images/icons8-users-64.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -76,6 +88,18 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#materials" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/style.css" text="Material Resources">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8-laptop-settings-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
             <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/style.css" text="Gantt">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
@@ -88,7 +112,7 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
-            <Pane prefHeight="168.0" prefWidth="256.0" />
+            <Pane prefHeight="107.0" prefWidth="256.0" />
             <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/style.css" text="Profile">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
@@ -121,14 +145,14 @@
                   <Insets top="15.0" />
                </VBox.margin>
             </ImageView>
-            <Label text="Hicham" textFill="#e7e5e5">
+            <Label fx:id="username" textFill="#e7e5e5">
                <VBox.margin>
                   <Insets bottom="20.0" top="10.0" />
                </VBox.margin>
             </Label>
          </children>
       </VBox>
-      <Pane fx:id="root" layoutX="237.0" prefHeight="744.0" prefWidth="879.0">
+      <Pane fx:id="root" layoutX="249.0" prefHeight="744.0" prefWidth="879.0">
          <children>
             <HBox layoutX="49.0" layoutY="33.0">
                <children>
