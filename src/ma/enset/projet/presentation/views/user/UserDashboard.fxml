@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="parent" nodeOrientation="LEFT_TO_RIGHT" prefHeight="744.0" prefWidth="1410.0" style="-fx-background-color: #fff;" stylesheets="@../../css/user/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.user.DashboardController">
+<AnchorPane id="AnchorPane" fx:id="parent" nodeOrientation="LEFT_TO_RIGHT" prefHeight="744.0" prefWidth="1410.0" stylesheets="@../../css/user/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.user.DashboardController">
     <children>
         <Pane layoutX="-2.0" prefHeight="145.0" prefWidth="1062.0" styleClass="head-background" stylesheets="@../../css/user/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -58,7 +58,7 @@
             </Button>
             </children>
         </Pane>
-        <VBox layoutX="-1.0" layoutY="145.0" prefHeight="438.0" prefWidth="252.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="146.0">
+        <VBox layoutX="-1.0" layoutY="145.0" prefHeight="438.0" prefWidth="252.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="146.0">
             <children>
                 <Label prefHeight="30.0" prefWidth="252.0" text="PROJECTS" textFill="#171717">
                     <font>
@@ -91,7 +91,7 @@
                 </JFXButton>
             </children>
         </VBox>
-        <Pane layoutX="71.0" layoutY="44.0" prefHeight="145.0" prefWidth="142.0" style="-fx-background-color: #fff;">
+        <Pane layoutX="71.0" layoutY="44.0" prefHeight="145.0" prefWidth="142.0" style="-fx-background-color: f4f4f4;">
             <children>
                 <ImageView fitHeight="128.0" fitWidth="112.0" layoutX="17.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -103,6 +103,6 @@
                 <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
             </effect>
         </Pane>
-      <Pane fx:id="root" layoutX="236.0" layoutY="154.0" prefHeight="589.0" prefWidth="1174.0" />
+      <Pane fx:id="root" layoutX="222.0" layoutY="172.0" prefHeight="589.0" prefWidth="1174.0" />
     </children>
 </AnchorPane>

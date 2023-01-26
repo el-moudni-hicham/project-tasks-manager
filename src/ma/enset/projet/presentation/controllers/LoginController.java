@@ -55,13 +55,11 @@ public class LoginController implements Initializable {
             if(user != null){
                 if(user.getRole().equals("ADMIN")){
                     Parent menu = FXMLLoader.load(getClass().getResource("../views/admin/AdminDashboard.fxml"));
-                    menu.setUserData(user);
                     content.getChildren().removeAll();
                     content.getChildren().setAll(menu);
-                    
+
                 }else{
                     Parent menu = FXMLLoader.load(getClass().getResource("../views/user/UserDashboard.fxml"));
-                    menu.setUserData(user);
                     content.getChildren().removeAll();
                     content.getChildren().setAll(menu);
                 }
