@@ -1,7 +1,6 @@
 package ma.enset.projet.dao.entites;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class Tache implements Serializable {
     private int id;
