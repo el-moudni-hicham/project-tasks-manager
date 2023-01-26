@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
@@ -14,8 +15,20 @@ import java.util.ResourceBundle;
 public class DashboardController implements Initializable {
     private Parent fxml;
     @FXML
+    private AnchorPane parent;
+    @FXML
     private Pane root;
 
+    @FXML
+    void home(ActionEvent event) {
+        try {
+            fxml = FXMLLoader.load(getClass().getResource("../../views/admin/AdminDashboard.fxml"));
+            parent.getChildren().removeAll();
+            parent.getChildren().setAll(fxml);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
     @FXML
     void users(ActionEvent event) {
         try {
@@ -27,6 +40,38 @@ public class DashboardController implements Initializable {
         }
     }
 
+    @FXML
+    void projects(ActionEvent event) {
+        try {
+            fxml = FXMLLoader.load(getClass().getResource("../../views/admin/projects/ProjectsView.fxml"));
+            root.getChildren().removeAll();
+            root.getChildren().setAll(fxml);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    void tasks(ActionEvent event) {
+        try {
+            fxml = FXMLLoader.load(getClass().getResource("../../views/admin/tasks/TasksView.fxml"));
+            root.getChildren().removeAll();
+            root.getChildren().setAll(fxml);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    void signOut(ActionEvent event) {
+        try {
+            fxml = FXMLLoader.load(getClass().getResource("../../views/Login.fxml"));
+            parent.getChildren().removeAll();
+            parent.getChildren().setAll(fxml);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

@@ -12,62 +12,79 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox layoutY="-1.0" prefHeight="594.0" prefWidth="757.0" spacing="20.0">
+      <VBox layoutY="-1.0" prefHeight="594.0" prefWidth="893.0" spacing="20.0">
          <children>
-            <Label text="Add User">
+            <Label prefHeight="37.0" prefWidth="137.0" text="Add User" textFill="#1e2753">
                <font>
-                  <Font name="Corbel Bold" size="27.0" />
+                  <Font name="Corbel Bold" size="32.0" />
                </font>
             </Label>
-            <VBox prefHeight="194.0" prefWidth="600.0" spacing="10.0">
+            <VBox prefHeight="233.0" prefWidth="821.0" spacing="10.0">
                <children>
                   <Label text="User Details">
                      <font>
-                        <Font name="Corbel Bold" size="19.0" />
+                        <Font name="Corbel Bold" size="22.0" />
                      </font>
                   </Label>
                   <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
                      <children>
-                        <Label text="Nom" />
+                        <Label text="Nom">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
                         <Pane prefHeight="34.0" prefWidth="217.0" />
                         <JFXTextField prefHeight="25.0" prefWidth="204.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
                      <children>
-                        <Label text="Prenom" />
+                        <Label text="Prenom">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
                         <Pane prefHeight="200.0" prefWidth="200.0" />
                         <JFXTextField prefHeight="25.0" prefWidth="204.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
                      <children>
-                        <Label text="Matricule" />
+                        <Label text="Matricule">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
                         <Pane prefHeight="34.0" prefWidth="191.0" />
                         <JFXTextField prefHeight="25.0" prefWidth="204.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
                      <children>
-                        <Label text="Date de Naissance" />
-                        <Pane prefHeight="35.0" prefWidth="144.0" />
+                        <Label text="Date de Naissance">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Pane prefHeight="25.0" prefWidth="134.0" />
                         <JFXDatePicker prefHeight="25.0" prefWidth="204.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
                      <children>
-                        <Label text="Matricule" />
+                        <Label text="Fonction">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
                         <Pane prefHeight="25.0" prefWidth="191.0" />
                         <JFXTextField prefHeight="25.0" prefWidth="204.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
                      <children>
-                        <Label text="Role" />
-                        <Pane prefHeight="25.0" prefWidth="217.0" />
+                        <Label text="Role">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Pane prefHeight="25.0" prefWidth="222.0" />
                         <JFXComboBox prefHeight="25.0" prefWidth="204.0" />
                      </children>
                   </HBox>
@@ -77,26 +94,35 @@
                <children>
                   <Label text="Contact Info">
                      <font>
-                        <Font name="Corbel Bold" size="19.0" />
+                        <Font name="Corbel Bold" size="22.0" />
                      </font>
                   </Label>
                   <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
                      <children>
-                        <Label text="Telephone" />
-                        <Pane prefHeight="25.0" prefWidth="177.0" />
+                        <Label text="Telephone">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Pane prefHeight="36.0" prefWidth="187.0" />
                         <JFXTextField prefHeight="25.0" prefWidth="204.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
                      <children>
-                        <Label text="Email" />
-                        <Pane prefHeight="25.0" prefWidth="203.0" />
+                        <Label text="Email">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Pane prefHeight="36.0" prefWidth="216.0" />
                         <JFXTextField prefHeight="25.0" prefWidth="204.0" />
                      </children>
                   </HBox>
                </children>
             </VBox>
-            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="89.0" style="-fx-background-color: F9A80C; -fx-background-radius: 50;" text="Ajouter" />
+            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="89.0" style="-fx-background-color: F9A80C; -fx-background-radius: 50;" text="Ajouter">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
          </children>
          <padding>
             <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
