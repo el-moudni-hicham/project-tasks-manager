@@ -11,68 +11,76 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.LoginController">
+<AnchorPane fx:id="content" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.LoginController">
    <children>
-      <Pane fx:id="content" prefHeight="507.0" prefWidth="824.0">
+      <VBox prefHeight="476.0" prefWidth="852.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="130.0">
          <children>
-            <Label layoutX="139.0" layoutY="33.0" text="User Login" textFill="#070707">
-               <font>
-                  <Font name="Berlin Sans FB" size="28.0" />
-               </font>
-            </Label>
-            <Label layoutX="91.0" layoutY="64.0" text="make sure your account is secure" textFill="#6f6a6a">
-               <font>
-                  <Font name="Berlin Sans FB" size="16.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="285.0" fitWidth="386.0" layoutX="14.0" layoutY="138.0" pickOnBounds="true" smooth="false">
-               <image>
-                  <Image url="@../images/side.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="585.0" layoutY="115.0" textFill="#172452">
-               <font>
-                  <Font name="Berlin Sans FB" size="20.0" />
-               </font>
-            </Label>
-            <HBox alignment="CENTER_RIGHT" layoutX="486.0" layoutY="197.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" style="-fx-background-color: transparent; -fx-border-color: #E1E1E1; -fx-border-radius: 50px;">
+            <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <TextField fx:id="txtUsername" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="221.0" promptText="Enter Your Username" style="-fx-background-color: transparent;" />
-                  <FontAwesomeIcon fill="#e1e1e1" iconName="USER" size="1.3em" />
+                  <Pane prefHeight="507.0" prefWidth="824.0">
+                     <children>
+                        <Label layoutX="139.0" layoutY="33.0" text="User Login" textFill="#070707">
+                           <font>
+                              <Font name="Berlin Sans FB" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="91.0" layoutY="64.0" text="make sure your account is secure" textFill="#6f6a6a">
+                           <font>
+                              <Font name="Berlin Sans FB" size="16.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="285.0" fitWidth="386.0" layoutX="14.0" layoutY="138.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../images/side.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="585.0" layoutY="115.0" textFill="#172452">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" layoutX="486.0" layoutY="197.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" style="-fx-background-color: transparent; -fx-border-color: #E1E1E1; -fx-border-radius: 50px;">
+                           <children>
+                              <TextField fx:id="txtUsername" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="221.0" promptText="Enter Your Username" style="-fx-background-color: transparent;" />
+                              <FontAwesomeIcon fill="#e1e1e1" iconName="USER" size="1.3em" />
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" layoutX="486.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" style="-fx-background-color: transparent; -fx-border-color: #E1E1E1; -fx-border-radius: 50px;">
+                           <children>
+                              <PasswordField fx:id="txtPassword" prefHeight="35.0" prefWidth="218.0" promptText="Enter Your Password" style="-fx-background-color: transparent;" />
+                              <FontAwesomeIcon fill="#e1e1e1" iconName="LOCK" size="1.3em" />
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
+                        <Label layoutX="486.0" layoutY="296.0" text="Forget Password?" textFill="#8d8989">
+                           <font>
+                              <Font name="Berlin Sans FB" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="693.0" layoutY="295.0" text="Register" textFill="#8d8989">
+                           <font>
+                              <Font name="Berlin Sans FB" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXButton layoutX="486.0" layoutY="376.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#handel_login" prefHeight="35.0" prefWidth="260.0" style="-fx-background-color: #FFCD07; -fx-background-radius: 50px;" text="LOG IN" />
+                        <ImageView fitHeight="150.0" fitWidth="126.0" layoutX="570.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logo_name.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
                </children>
-               <padding>
-                  <Insets right="10.0" />
-               </padding>
             </HBox>
-            <HBox alignment="CENTER_RIGHT" layoutX="486.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" style="-fx-background-color: transparent; -fx-border-color: #E1E1E1; -fx-border-radius: 50px;">
-               <children>
-                  <PasswordField fx:id="txtPassword" prefHeight="35.0" prefWidth="218.0" promptText="Enter Your Password" style="-fx-background-color: transparent;" />
-                  <FontAwesomeIcon fill="#e1e1e1" iconName="LOCK" size="1.3em" />
-               </children>
-               <padding>
-                  <Insets right="10.0" />
-               </padding>
-            </HBox>
-            <Label layoutX="486.0" layoutY="296.0" text="Forget Password?" textFill="#8d8989">
-               <font>
-                  <Font name="Berlin Sans FB" size="16.0" />
-               </font>
-            </Label>
-            <Label layoutX="693.0" layoutY="295.0" text="Register" textFill="#8d8989">
-               <font>
-                  <Font name="Berlin Sans FB" size="16.0" />
-               </font>
-            </Label>
-            <JFXButton layoutX="486.0" layoutY="376.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#handel_login" prefHeight="35.0" prefWidth="260.0" style="-fx-background-color: #FFCD07; -fx-background-radius: 50px;" text="LOG IN" />
-            <ImageView fitHeight="150.0" fitWidth="126.0" layoutX="570.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/logo_name.png" />
-               </image>
-            </ImageView>
          </children>
-      </Pane>
+      </VBox>
    </children>
 </AnchorPane>

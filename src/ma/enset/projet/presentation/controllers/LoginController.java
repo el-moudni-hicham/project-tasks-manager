@@ -23,10 +23,7 @@ import java.util.ResourceBundle;
 public class LoginController implements Initializable {
 
     @FXML
-    private VBox parent;
-
-    @FXML
-    private Pane content;
+    private AnchorPane content;
 
     @FXML
     private TextField txtUsername;

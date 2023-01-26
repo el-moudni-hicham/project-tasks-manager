@@ -1,6 +1,7 @@
 package ma.enset.projet.dao.entites;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Tache implements Serializable {
     private int id;
@@ -8,6 +9,16 @@ public class Tache implements Serializable {
     private String description;
     private String date_debut;
     private String date_fin;
+    private List<Materiele> materielles;
+
+    public List<Materiele> getMaterielles() {
+        return materielles;
+    }
+
+    public void setMaterielles(List<Materiele> materielles) {
+        this.materielles = materielles;
+    }
+
     private String etat;
 
     public int getId() {
