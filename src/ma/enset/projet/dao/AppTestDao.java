@@ -5,7 +5,7 @@ import ma.enset.projet.dao.entites.Materiele;
 import java.util.List;
 
 public class AppTestDao {
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         MaterielleDao mDao=new MaterielleDaoImpl();
         Materiele materiele=new Materiele(id, nom, caracteristique, quantite);
        // materiele.setId(1);
@@ -21,5 +21,5 @@ public class AppTestDao {
         for(Materiele m:materieles){
             System.out.println(m);
         }
-    }
+    }*/
 }
