@@ -1,4 +1,11 @@
 package ma.enset.projet.dao;
 
-public interface TacheDao {
+import ma.enset.projet.dao.entites.Tache;
+import ma.enset.projet.dao.entites.User;
+
+import java.util.List;
+
+public interface TacheDao extends Dao<Tache>{
+    List<Tache> findByMotCle(String mc);
+
 }

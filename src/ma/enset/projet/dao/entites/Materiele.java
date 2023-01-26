@@ -8,23 +8,12 @@ public class Materiele implements Serializable {
     private String caracteristique;
     private int quantite;
 
-    public Materiele() {
-
-    }
-
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public Materiele(int id, String nom, String caracteristique, int quantite) {
-        this.id = id;
-        this.nom = nom;
-        this.caracteristique = caracteristique;
-        this.quantite = quantite;
     }
 
     public String getNom() {
@@ -49,14 +38,5 @@ public class Materiele implements Serializable {
 
     public void setQuantite(int quantite) {
         this.quantite = quantite;
-    }
-
-    @Override
-    public String toString() {
-        return "Materiele{" +
-                "nom='" + nom + '\'' +
-                ", caracteristique='" + caracteristique + '\'' +
-                ", quantite=" + quantite +
-                '}';
     }
 }
