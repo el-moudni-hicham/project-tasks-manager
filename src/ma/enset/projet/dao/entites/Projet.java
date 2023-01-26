@@ -1,6 +1,7 @@
 package ma.enset.projet.dao.entites;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 public class Projet implements Serializable {
@@ -8,6 +9,24 @@ public class Projet implements Serializable {
     private String nom ;
     private User responsable;
     private List<Tache> taches;
+    private Date dat_debut;
+    private Date dat_fin;
+
+    public Date getDat_debut() {
+        return dat_debut;
+    }
+
+    public void setDat_debut(Date dat_debut) {
+        this.dat_debut = dat_debut;
+    }
+
+    public Date getDat_fin() {
+        return dat_fin;
+    }
+
+    public void setDat_fin(Date dat_fin) {
+        this.dat_fin = dat_fin;
+    }
 
     public int getId() {
         return id;
