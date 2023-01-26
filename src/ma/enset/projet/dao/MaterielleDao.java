@@ -1,4 +1,9 @@
 package ma.enset.projet.dao;
 
-public interface MaterielleDao {
+import ma.enset.projet.dao.entites.Materiele;
+
+import java.util.List;
+
+public interface MaterielleDao extends Dao<Materiele> {
+
 }
