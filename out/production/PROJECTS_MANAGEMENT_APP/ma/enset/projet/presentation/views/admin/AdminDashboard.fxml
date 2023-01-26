@@ -22,7 +22,7 @@
                <VBox.margin>
                   <Insets bottom="10.0" top="30.0" />
                </VBox.margin></ImageView>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#home" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/style.css" text="Home" textFill="#e7e5e5">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#home" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/admin/style.css" text="Home" textFill="#e7e5e5">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -40,7 +40,7 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/style.css" text="Users">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/admin/style.css" text="Users">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -52,7 +52,7 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#users" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/style.css" text="Human Resources">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#users" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/admin/style.css" text="Human Resources">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -64,7 +64,7 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#projects" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/style.css" text="Projetcs">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#projects" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/admin/style.css" text="Projetcs">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -76,7 +76,7 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
-            <Button fx:id="btnMenus" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#tasks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/style.css" text="Tasks">
+            <Button fx:id="btnMenus" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#tasks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/admin/style.css" text="Tasks">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -88,7 +88,7 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#materials" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/style.css" text="Material Resources">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#materials" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/admin/style.css" text="Material Resources">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -100,7 +100,7 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/style.css" text="Gantt">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/admin/style.css" text="Gantt">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -113,7 +113,7 @@
                </padding>
             </Button>
             <Pane prefHeight="107.0" prefWidth="256.0" />
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/style.css" text="Profile">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/admin/style.css" text="Profile">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -125,7 +125,7 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#signOut" prefHeight="42.0" prefWidth="299.0" stylesheets="@../../css/style.css" text="Sign Out">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#signOut" prefHeight="42.0" prefWidth="299.0" stylesheets="@../../css/admin/style.css" text="Sign Out">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -152,7 +152,7 @@
             </Label>
          </children>
       </VBox>
-      <Pane fx:id="root" layoutX="249.0" prefHeight="744.0" prefWidth="879.0">
+      <Pane fx:id="root" layoutX="237.0" prefHeight="744.0" prefWidth="893.0">
          <children>
             <HBox layoutX="49.0" layoutY="33.0">
                <children>
@@ -174,6 +174,63 @@
                   </Label>
                </children>
             </HBox>
+            <Pane layoutX="64.0" layoutY="142.0" prefHeight="200.0" prefWidth="311.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+               <children>
+                  <ImageView fitHeight="55.0" fitWidth="101.0" layoutX="25.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8-users-64.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="100.0" layoutY="37.0" prefHeight="23.0" prefWidth="179.0" text="Human Resources" textFill="#f9a80c">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="144.0" layoutY="90.0" prefHeight="66.0" prefWidth="77.0" text="19" textFill="#f9a80c">
+                     <font>
+                        <Font name="Corbel Bold" size="66.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="471.0" layoutY="142.0" prefHeight="200.0" prefWidth="311.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+               <children>
+                  <Label layoutX="100.0" layoutY="37.0" text="Material Resources" textFill="#1e2753">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="144.0" layoutY="90.0" prefHeight="66.0" prefWidth="77.0" text="17" textFill="#1e2753">
+                     <font>
+                        <Font name="Corbel Bold" size="66.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="23.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8-laptop-settings-50.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="69.0" layoutY="429.0" prefHeight="200.0" prefWidth="311.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+               <children>
+                  <Label layoutX="100.0" layoutY="37.0" text="Projects" textFill="#0cdef7">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="144.0" layoutY="90.0" prefHeight="66.0" prefWidth="77.0" text="8" textFill="#0cdef7">
+                     <font>
+                        <Font name="Corbel Bold" size="66.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="55.0" fitWidth="47.0" layoutX="21.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8_Box_32px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
          </children>
       </Pane>
    </children>
