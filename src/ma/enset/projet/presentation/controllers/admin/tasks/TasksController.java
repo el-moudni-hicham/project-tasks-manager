@@ -16,7 +16,7 @@ public class TasksController implements Initializable {
     @FXML
     private AnchorPane root;
     @FXML
-    void addUser(ActionEvent event) {
+    void addTask(ActionEvent event) {
         try {
             fxml = FXMLLoader.load(getClass().getResource("../../../views/admin/tasks/AddView.fxml"));
             root.getChildren().removeAll();

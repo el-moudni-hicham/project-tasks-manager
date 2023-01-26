@@ -6,6 +6,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -87,19 +88,7 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
-            <ImageView fitHeight="73.0" fitWidth="67.0" layoutX="108.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../images/jimmy-fallon.png" />
-               </image>
-               <VBox.margin>
-                  <Insets top="100.0" />
-               </VBox.margin>
-            </ImageView>
-            <Label text="Hicham" textFill="#e7e5e5">
-               <VBox.margin>
-                  <Insets bottom="20.0" top="10.0" />
-               </VBox.margin>
-            </Label>
+            <Pane prefHeight="168.0" prefWidth="256.0" />
             <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/style.css" text="Profile">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
@@ -124,15 +113,43 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
+            <ImageView fitHeight="56.0" fitWidth="55.0" layoutX="108.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/jimmy-fallon.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label text="Hicham" textFill="#e7e5e5">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="10.0" />
+               </VBox.margin>
+            </Label>
          </children>
       </VBox>
-      <Pane fx:id="root" layoutX="251.0" prefHeight="744.0" prefWidth="879.0">
+      <Pane fx:id="root" layoutX="237.0" prefHeight="744.0" prefWidth="879.0">
          <children>
-            <Label layoutX="57.0" layoutY="25.0" text="Merhbaa bikouum !">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
+            <HBox layoutX="49.0" layoutY="33.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8-dashboard-layout-24%20(1).png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="33.0" prefWidth="271.0" text="Home Dashboard">
+                     <font>
+                        <Font name="Corbel Bold" size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
          </children>
       </Pane>
    </children>

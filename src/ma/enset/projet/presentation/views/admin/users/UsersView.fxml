@@ -5,30 +5,74 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane fx:id="root" prefHeight="558.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.admin.users.UsersController">
     <children>
       <VBox prefHeight="558.0" prefWidth="917.0" spacing="30.0">
          <children>
-                <Label prefHeight="33.0" prefWidth="271.0" text="Comptes d'utilisateurs">
-                    <font>
+            <HBox>
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/check_inbox_32px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/arrow_32px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" top="9.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="33.0" prefWidth="271.0" text="Users">
+                     <font>
                         <Font name="Corbel Bold" size="28.0" />
-                    </font>
-                </Label>
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
             <VBox prefHeight="39.0" prefWidth="708.0">
                <children>
-                    <Button fx:id="addUser" mnemonicParsing="false" onAction="#addUser" prefHeight="31.0" prefWidth="111.0" style="-fx-background-color: F9A80C; -fx-background-radius: 50;" text="Ajouter User">
-                        <font>
-                            <Font name="Corbel" size="15.0" />
-                        </font>
+                  <HBox prefHeight="40.0" prefWidth="787.0" spacing="20.0">
                      <VBox.margin>
                         <Insets left="30.0" />
                      </VBox.margin>
-                    </Button>
+                     <children>
+                        <Label prefHeight="23.0" prefWidth="104.0" text="All Users">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Corbel Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="addUser" mnemonicParsing="false" onAction="#addUser" prefHeight="31.0" prefWidth="160.0" style="-fx-background-color: F9A80C; -fx-background-radius: 50;" text="Add New User">
+                           <font>
+                              <Font name="Corbel Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/Plus_32px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
               <TableView prefHeight="326.0" prefWidth="780.0">
