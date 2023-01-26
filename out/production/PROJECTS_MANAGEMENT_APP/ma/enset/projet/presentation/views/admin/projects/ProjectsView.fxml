@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="558.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.admin.projects.ProjectsController">
+<AnchorPane fx:id="root" prefHeight="627.0" prefWidth="1088.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.admin.projects.ProjectsController">
     <children>
-        <VBox prefHeight="558.0" prefWidth="917.0" spacing="30.0">
+        <VBox prefHeight="627.0" prefWidth="1088.0" spacing="30.0">
             <children>
             <HBox>
                <children>
@@ -79,7 +79,8 @@
                     <columns>
                         <TableColumn prefWidth="75.0" text="ID" />
                         <TableColumn prefWidth="341.0" text="Nom" />
-                        <TableColumn prefWidth="400.0" text="Responsable" />
+                        <TableColumn prefWidth="244.0" text="Responsable" />
+                  <TableColumn prefWidth="327.0" text="Actions" />
                     </columns>
                 </TableView>
             </children>

@@ -16,14 +16,14 @@
    <children>
       <VBox layoutY="-1.0" prefHeight="594.0" prefWidth="893.0" spacing="20.0">
          <children>
-            <Label prefHeight="37.0" prefWidth="137.0" text="Add User" textFill="#1e2753">
+            <Label prefHeight="37.0" prefWidth="348.0" text="Add Human Resources" textFill="#1e2753">
                <font>
                   <Font name="Corbel Bold" size="32.0" />
                </font>
             </Label>
             <VBox prefHeight="233.0" prefWidth="821.0" spacing="10.0">
                <children>
-                  <Label text="User Details">
+                  <Label text="HR Details">
                      <font>
                         <Font name="Corbel Bold" size="22.0" />
                      </font>

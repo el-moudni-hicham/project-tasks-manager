@@ -14,7 +14,7 @@
 
 <AnchorPane fx:id="root" prefHeight="558.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.admin.users.UsersController">
     <children>
-      <VBox prefHeight="558.0" prefWidth="917.0" spacing="30.0">
+      <VBox prefHeight="628.0" prefWidth="1088.0" spacing="30.0">
          <children>
             <HBox>
                <children>
@@ -34,7 +34,7 @@
                         <Insets left="5.0" top="9.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Label prefHeight="33.0" prefWidth="271.0" text="Users">
+                  <Label prefHeight="33.0" prefWidth="271.0" text="Human Resources">
                      <font>
                         <Font name="Corbel Bold" size="28.0" />
                      </font>
@@ -51,7 +51,7 @@
                         <Insets left="30.0" />
                      </VBox.margin>
                      <children>
-                        <Label prefHeight="23.0" prefWidth="104.0" text="All Users">
+                        <Label prefHeight="23.0" prefWidth="192.0" text="All Human Resources">
                            <HBox.margin>
                               <Insets top="5.0" />
                            </HBox.margin>
@@ -59,7 +59,7 @@
                               <Font name="Corbel Bold" size="20.0" />
                            </font>
                         </Label>
-                        <Button fx:id="addUser" mnemonicParsing="false" onAction="#addUser" prefHeight="31.0" prefWidth="160.0" style="-fx-background-color: F9A80C; -fx-background-radius: 50;" text="Add New User">
+                        <Button fx:id="addUser" mnemonicParsing="false" onAction="#addUser" prefHeight="31.0" prefWidth="160.0" style="-fx-background-color: F9A80C; -fx-background-radius: 50;" text="Add New HR">
                            <font>
                               <Font name="Corbel Bold" size="14.0" />
                            </font>
@@ -77,13 +77,13 @@
             </VBox>
               <TableView prefHeight="326.0" prefWidth="780.0">
                   <columns>
+                  <TableColumn prefWidth="75.0" text="ID" />
                       <TableColumn prefWidth="75.0" text="Nom " />
                       <TableColumn prefWidth="75.0" text="Prenom" />
-                      <TableColumn prefWidth="75.0" text="Matricule" />
-                      <TableColumn prefWidth="141.0" text="Date Naissance" />
-                      <TableColumn prefWidth="119.0" text="Telephone " />
-                      <TableColumn prefWidth="127.0" text="Email" />
-                      <TableColumn prefWidth="204.0" text="Actions" />
+                      <TableColumn prefWidth="175.0" text="Date Naissance" />
+                      <TableColumn prefWidth="158.0" text="Telephone " />
+                      <TableColumn minWidth="0.0" prefWidth="183.0" text="Email" />
+                  <TableColumn prefWidth="246.0" text="Actions" />
                   </columns>
               </TableView>
          </children>
