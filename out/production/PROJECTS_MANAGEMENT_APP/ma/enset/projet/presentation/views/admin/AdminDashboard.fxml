@@ -119,7 +119,12 @@
                   <Font name="Corbel Bold" size="14.0" />
                </font>
             </Button>
-            <Pane prefHeight="125.0" prefWidth="256.0" />
+            <Pane prefHeight="189.0" prefWidth="256.0" />
+            <Label fx:id="username" textFill="#e7e5e5">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="10.0" />
+               </VBox.margin>
+            </Label>
             <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/admin/style.css" text="Profile">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
@@ -150,19 +155,6 @@
                   <Font name="Corbel Bold" size="14.0" />
                </font>
             </Button>
-            <ImageView fitHeight="56.0" fitWidth="55.0" layoutX="108.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../images/jimmy-fallon.png" />
-               </image>
-               <VBox.margin>
-                  <Insets top="15.0" />
-               </VBox.margin>
-            </ImageView>
-            <Label fx:id="username" textFill="#e7e5e5">
-               <VBox.margin>
-                  <Insets bottom="20.0" top="10.0" />
-               </VBox.margin>
-            </Label>
          </children>
       </VBox>
       <Pane fx:id="root" layoutX="237.0" prefHeight="744.0" prefWidth="1054.0">
