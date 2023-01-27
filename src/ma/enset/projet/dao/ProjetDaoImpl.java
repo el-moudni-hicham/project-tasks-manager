@@ -1,6 +1,7 @@
 package ma.enset.projet.dao;
 
 import ma.enset.projet.dao.entites.Projet;
+import ma.enset.projet.dao.entites.ResourceHumaine;
 import ma.enset.projet.dao.entites.Tache;
 
 import java.sql.*;
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProjetDaoImpl implements ProjetDao{
-    private Class<? extends ma.enset.projet.dao.entites.User> User;
+    private Class<? extends ma.enset.projet.dao.entites.ResourceHumaine> ResourceHumaine;
 
     @Override
     public List<Projet> findAll() {
@@ -22,7 +23,7 @@ public class ProjetDaoImpl implements ProjetDao{
                 Projet p = new Projet();
                 p.setId(rs.getInt(1));
                 p.setNom(rs.getString(2));
-                p.setResponsable(rs.getObject(3,User));
+                p.setResponsable(rs.getObject(3, ResourceHumaine));
                 p.setTaches((List<Tache>) rs.getArray(4));
                 projets.add(p);
             }
@@ -44,7 +45,7 @@ public class ProjetDaoImpl implements ProjetDao{
             if (rs.next()) {
                 p.setId(rs.getInt(1));
                 p.setNom(rs.getString(2));
-                p.setResponsable(rs.getObject(3,User));
+                p.setResponsable(rs.getObject(3, ResourceHumaine));
                 p.setTaches((List<Tache>) rs.getArray(4));
             }
         } catch (SQLException e){
@@ -111,7 +112,7 @@ public class ProjetDaoImpl implements ProjetDao{
                 Projet p = new Projet();
                 p.setId(rs.getInt(1));
                 p.setNom(rs.getString(2));
-                p.setResponsable(rs.getObject(3,User));
+                p.setResponsable(rs.getObject(3,ResourceHumaine));
                 p.setTaches((List<Tache>) rs.getArray(4));
 
                 projets.add(p);

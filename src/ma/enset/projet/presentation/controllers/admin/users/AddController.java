@@ -10,10 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import ma.enset.projet.dao.ResourceHumaineDao;
 import ma.enset.projet.dao.ResourceHumaineDaoImpl;
-import ma.enset.projet.dao.UserDao;
-import ma.enset.projet.dao.UserDaoImpl;
 import ma.enset.projet.dao.entites.ResourceHumaine;
-import ma.enset.projet.dao.entites.User;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -73,6 +70,7 @@ public class AddController implements Initializable {
             int day = date.getDayOfMonth();
             Date d_naiss = new Date(year, month, day);
 
+            String role = txtRole.getValue();
 
             ResourceHumaine rh = new ResourceHumaine();
             rh.setNom(nom);
@@ -81,24 +79,15 @@ public class AddController implements Initializable {
             rh.setDate_naissance(String.valueOf(d_naiss));
             rh.setTelephone(telephone);
             rh.setEmail(email);
-
-            txtNom.setText(String.valueOf(d_naiss));
-
-            String role = txtRole.getValue();
-            User user = new User();
-            user.setUsername(email);
-            user.setPassword(nom+year);
-            user.setRole(role);
+            rh.setUsername(nom+" "+prenom);
+            rh.setPassword(nom+year);
+            rh.setRole(role);
 
             ResourceHumaineDao rhd = new ResourceHumaineDaoImpl();
             rhd.save(rh);
 
-            UserDao ud = new UserDaoImpl();
-            ud.save(user);
-
-
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setContentText("Produit a ete ajouter avec succes");
+            alert.setContentText("User a ete ajouter avec succes");
             alert.show();
         }
     }

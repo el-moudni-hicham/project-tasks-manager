@@ -7,7 +7,7 @@ import java.util.List;
 public class Projet implements Serializable {
     private int id;
     private String nom ;
-    private User responsable;
+    private ResourceHumaine responsable;
     private List<Tache> taches;
     private Date dat_debut;
     private Date dat_fin;
@@ -44,11 +44,11 @@ public class Projet implements Serializable {
         this.nom = nom;
     }
 
-    public User getResponsable() {
+    public ResourceHumaine getResponsable() {
         return responsable;
     }
 
-    public void setResponsable(User responsable) {
+    public void setResponsable(ResourceHumaine responsable) {
         this.responsable = responsable;
     }
 

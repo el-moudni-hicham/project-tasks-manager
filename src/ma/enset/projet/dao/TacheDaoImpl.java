@@ -1,7 +1,6 @@
 package ma.enset.projet.dao;
 
 import ma.enset.projet.dao.entites.Tache;
-import ma.enset.projet.dao.entites.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

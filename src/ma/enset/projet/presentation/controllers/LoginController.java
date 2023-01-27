@@ -5,18 +5,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-import ma.enset.projet.dao.UserDaoImpl;
-import ma.enset.projet.dao.entites.User;
-import ma.enset.projet.presentation.controllers.admin.DashboardController;
+import ma.enset.projet.dao.ResourceHumaineDaoImpl;
+import ma.enset.projet.dao.entites.ResourceHumaine;
 
 import java.io.IOException;
 import java.net.URL;
@@ -43,7 +38,7 @@ public class LoginController implements Initializable {
 
     @FXML
     private void handel_login(ActionEvent event) throws IOException {
-        UserDaoImpl userDao = new UserDaoImpl();
+        ResourceHumaineDaoImpl rhd = new ResourceHumaineDaoImpl();
         if(txtUsername.getText().isEmpty() || txtPassword.getText().isEmpty()){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setContentText("Veuillez remplir tout les champs !");
@@ -51,9 +46,10 @@ public class LoginController implements Initializable {
         }else{
             String username = txtUsername.getText();
             String password = txtPassword.getText();
-            User user = userDao.checkUser(username, password);
-            if(user != null){
-                if(user.getRole().equals("ADMIN")){
+            ResourceHumaine rh = rhd.checkRH(username,password);
+
+            if(rh != null){
+                if(rh.getRole().equals("ADMIN")){
                     Parent menu = FXMLLoader.load(getClass().getResource("../views/admin/AdminDashboard.fxml"));
                     content.getChildren().removeAll();
                     content.getChildren().setAll(menu);
