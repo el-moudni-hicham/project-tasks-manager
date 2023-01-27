@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
@@ -18,6 +19,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Callback;
 import ma.enset.projet.dao.ResourceHumaineDao;
 import ma.enset.projet.dao.ResourceHumaineDaoImpl;
@@ -140,29 +143,30 @@ public class UsersController implements Initializable {
                             }
                         });
 
-                        /*editIcon.setOnMouseClicked((MouseEvent event) -> {
+                        editIcon.setOnMouseClicked((MouseEvent event) -> {
                             rh = usersTableView.getSelectionModel().getSelectedItem();
                             FXMLLoader loader = new FXMLLoader ();
                             loader.setLocation(getClass().getResource("../../../views/admin/users/editView.fxml"));
+
                             try {
                                 loader.load();
-                            } catch (IOException ex) {
-                                Logger.getLogger(TableViewController.class.getName()).log(Level.SEVERE, null, ex);
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
                             }
 
-                            AddStudentController addStudentController = loader.getController();
-                            addStudentController.setUpdate(true);
-                            addStudentController.setTextField(student.getId(), student.getName(),
-                                    student.getBirth().toLocalDate(),student.getAdress(), student.getEmail());
+
+                            EditController editController = loader.getController();
+                            editController.setUpdate(true);
+                            editController.setTextField(rh.getId(),rh.getNom(),rh.getPrenom(),rh.getFonction(),rh.getEmail(),rh.getTelephone());
                             Parent parent = loader.getRoot();
                             Stage stage = new Stage();
                             stage.setScene(new Scene(parent));
                             stage.initStyle(StageStyle.UTILITY);
                             stage.show();
-
+                            //loadUsers();
                         });
 
-                         */
+
 
                         HBox managebtn = new HBox(editIcon, deleteIcon);
                         managebtn.setStyle("-fx-alignment:center");
@@ -172,6 +176,7 @@ public class UsersController implements Initializable {
                         setGraphic(managebtn);
 
                         setText(null);
+
 
                     }
                 }
@@ -195,7 +200,7 @@ public class UsersController implements Initializable {
         loadUsers();
     }
 
-    private void loadUsers(){
+    public void loadUsers(){
         observableList.clear();
         observableList.addAll(rhs.getAllRhs());
     }

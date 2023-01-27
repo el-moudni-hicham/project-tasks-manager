@@ -144,6 +144,23 @@ public class ResourceHumaineDaoImpl implements ResourceHumaineDao{
     }
 
     @Override
+    public void updateRh(int id, String nom, String prenom, String fonction, String email, String telephone) {
+        Connection connection = SingletonConnexionDB.getConnection();
+        try {
+            PreparedStatement pstm = connection.prepareStatement("UPDATE RESOURCES_HUMAINE SET NOM=?,PRENOM=?,FONCTION=?,EMAIL=?,TELEPHONE=? WHERE ID=?");
+            pstm.setString(1,nom);
+            pstm.setString(2,prenom);
+            pstm.setString(3, fonction);
+            pstm.setString(4, email);
+            pstm.setString(5, telephone);
+            pstm.setInt(6,id);
+            pstm.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    @Override
     public List<ResourceHumaine> findByMotCle(String mc) {
         Connection connection = SingletonConnexionDB.getConnection();
         List<ResourceHumaine> users = new ArrayList();

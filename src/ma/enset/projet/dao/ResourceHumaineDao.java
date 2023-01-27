@@ -7,4 +7,5 @@ import java.util.List;
 public interface ResourceHumaineDao extends Dao<ResourceHumaine> {
     List<ResourceHumaine> findByMotCle(String mc);
     int countRh();
+    void updateRh(int id, String nom,String prenom,String fonction,String email,String telephone);
 }

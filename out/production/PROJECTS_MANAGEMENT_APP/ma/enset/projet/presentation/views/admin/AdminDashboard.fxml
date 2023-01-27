@@ -199,7 +199,7 @@
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="rhNumber" layoutX="144.0" layoutY="90.0" prefHeight="66.0" prefWidth="77.0" textFill="#f9a80c">
+                  <Label fx:id="rhNumber" layoutX="117.0" layoutY="64.0" prefHeight="66.0" prefWidth="77.0" textFill="#f9a80c">
                      <font>
                         <Font name="Corbel Bold" size="66.0" />
                      </font>
@@ -244,7 +244,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <PieChart fx:id="chart" layoutX="517.0" layoutY="116.0" prefHeight="299.0" prefWidth="471.0" />
+            <PieChart fx:id="chart" layoutX="506.0" layoutY="223.0" prefHeight="299.0" prefWidth="471.0" />
          </children>
       </Pane>
    </children>

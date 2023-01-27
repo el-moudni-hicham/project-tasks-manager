@@ -28,9 +28,10 @@ public class RhServiceImpl implements RhService{
     }
 
     @Override
-    public ResourceHumaine updateRh(ResourceHumaine rh) {
-        return rhd.update(rh);
+    public void updateRh(int id, String nom, String prenom, String fonction, String email, String telephone) {
+        rhd.updateRh(id, nom, prenom, fonction, email, telephone);
     }
+
 
     @Override
     public ResourceHumaine getRhById(int id) {
