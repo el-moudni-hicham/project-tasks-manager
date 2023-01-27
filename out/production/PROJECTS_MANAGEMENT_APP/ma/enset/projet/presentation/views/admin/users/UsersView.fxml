@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="558.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.admin.users.UsersController">
+<AnchorPane fx:id="root" prefHeight="628.0" prefWidth="1118.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.admin.users.UsersController">
     <children>
-      <VBox prefHeight="628.0" prefWidth="1088.0" spacing="30.0">
+      <VBox prefHeight="628.0" prefWidth="1114.0" spacing="30.0">
          <children>
             <HBox>
                <children>
@@ -75,15 +75,19 @@
                   </HBox>
                </children>
             </VBox>
-              <TableView prefHeight="326.0" prefWidth="780.0">
+              <TableView fx:id="usersTableView" prefHeight="326.0" prefWidth="1091.0">
                   <columns>
-                  <TableColumn prefWidth="75.0" text="ID" />
-                      <TableColumn prefWidth="75.0" text="Nom " />
-                      <TableColumn prefWidth="75.0" text="Prenom" />
-                      <TableColumn prefWidth="175.0" text="Date Naissance" />
-                      <TableColumn prefWidth="158.0" text="Telephone " />
-                      <TableColumn minWidth="0.0" prefWidth="183.0" text="Email" />
-                  <TableColumn prefWidth="246.0" text="Actions" />
+                  <TableColumn fx:id="colId" prefWidth="58.0" text="ID" />
+                      <TableColumn fx:id="colNom" prefWidth="83.0" text="Nom " />
+                      <TableColumn fx:id="colPrenom" prefWidth="84.0" text="Prenom" />
+                      <TableColumn fx:id="colDateN" prefWidth="97.0" text="Date Naissance" />
+                  <TableColumn fx:id="colFonction" prefWidth="76.0" text="Fonction" />
+                  <TableColumn fx:id="colDisponible" prefWidth="98.0" text="Disponobilite" />
+                  <TableColumn fx:id="colDateI" prefWidth="102.0" text="Date Incsription" />
+                  <TableColumn fx:id="colRole" prefWidth="86.0" text="Role" />
+                      <TableColumn fx:id="colTelephone" prefWidth="107.0" text="Telephone " />
+                      <TableColumn fx:id="colEmail" minWidth="0.0" prefWidth="113.0" text="Email" />
+                  <TableColumn fx:id="colActions" minWidth="0.0" prefWidth="109.0" text="Actions" />
                   </columns>
               </TableView>
          </children>

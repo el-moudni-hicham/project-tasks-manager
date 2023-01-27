@@ -33,6 +33,7 @@ public class ResourceHumaineDaoImpl implements ResourceHumaineDao{
                 rh.setUsername(rs.getString(9));
                 rh.setPassword(rs.getString(10));
                 rh.setRole(rs.getString(11));
+                rh.setDisponible(rs.getBoolean(12));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -60,6 +61,7 @@ public class ResourceHumaineDaoImpl implements ResourceHumaineDao{
                 rh.setUsername(rs.getString(9));
                 rh.setPassword(rs.getString(10));
                 rh.setRole(rs.getString(11));
+                rh.setDisponible(rs.getBoolean(12));
                 users.add(rh);
             }
         } catch (SQLException e){
@@ -90,6 +92,7 @@ public class ResourceHumaineDaoImpl implements ResourceHumaineDao{
                 rh.setUsername(rs.getString(9));
                 rh.setPassword(rs.getString(10));
                 rh.setRole(rs.getString(11));
+                rh.setDisponible(rs.getBoolean(12));
             }
         } catch (SQLException e){
             e.printStackTrace();
@@ -113,6 +116,7 @@ public class ResourceHumaineDaoImpl implements ResourceHumaineDao{
             pstm.setString(8, o.getUsername());
             pstm.setString(9, o.getPassword());
             pstm.setString(10, o.getRole());
+            //pstm.setBoolean(11,o.isDisponible());
             pstm.executeUpdate();
 
         } catch (SQLException e){
@@ -161,6 +165,7 @@ public class ResourceHumaineDaoImpl implements ResourceHumaineDao{
                 rh.setUsername(rs.getString(9));
                 rh.setPassword(rs.getString(10));
                 rh.setRole(rs.getString(11));
+                rh.setDisponible(rs.getBoolean(12));
                 users.add(rh);
             }
         } catch (SQLException e){

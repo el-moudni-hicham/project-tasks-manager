@@ -16,6 +16,7 @@ public class ResourceHumaine implements Serializable {
     private String username;
     private String password;
     private String role;
+    private boolean disponible = false;
 
     public ResourceHumaine() {
     }
@@ -39,7 +40,7 @@ public class ResourceHumaine implements Serializable {
         this.role = role;
     }
 
-    public ResourceHumaine(int id, String nom, String prenom, String fonction, String date_naissance, String telephone, String email, String date_insc) {
+    public ResourceHumaine(int id, String nom, String prenom, String fonction, String date_naissance, String telephone, String email, String date_insc, boolean disponible) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -48,6 +49,7 @@ public class ResourceHumaine implements Serializable {
         this.telephone = telephone;
         this.email = email;
         this.date_insc = date_insc;
+        this.disponible = disponible;
 
     }
 
@@ -137,5 +139,13 @@ public class ResourceHumaine implements Serializable {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
     }
 }
