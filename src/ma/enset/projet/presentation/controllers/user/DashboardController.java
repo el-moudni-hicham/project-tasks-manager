@@ -23,6 +23,26 @@ public class DashboardController implements Initializable {
 
 
     @FXML
+    void home(ActionEvent event) {
+        try {
+            fxml = FXMLLoader.load(getClass().getResource("../../views/user/UserDashboard.fxml"));
+            parent.getChildren().removeAll();
+            parent.getChildren().setAll(fxml);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    @FXML
+    void tasks(ActionEvent event) {
+        try {
+            fxml = FXMLLoader.load(getClass().getResource("../../views/user/tasks/TasksView.fxml"));
+            root.getChildren().removeAll();
+            root.getChildren().setAll(fxml);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    @FXML
     void signOut(ActionEvent event) {
         try {
             fxml = FXMLLoader.load(getClass().getResource("../../views/Login.fxml"));

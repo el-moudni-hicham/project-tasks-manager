@@ -62,7 +62,7 @@
             <children>
                 <Label prefHeight="30.0" prefWidth="252.0" text="PROJECTS" textFill="#171717">
                     <font>
-                        <Font size="13.0" />
+                        <Font name="Corbel Bold" size="17.0" />
                     </font>
                     <padding>
                         <Insets left="40.0" />
@@ -71,17 +71,17 @@
                         <Insets top="60.0" />
                     </VBox.margin>
                 </Label>
-                <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Tasks" textFill="#5b5858">
+                <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#home" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Home" textFill="#464242">
                     <VBox.margin>
                         <Insets />
                     </VBox.margin>
                     <font>
-                        <Font size="13.0" />
+                        <Font name="Corbel Bold" size="14.0" />
                     </font>
                     <graphic>
                         <ImageView accessibleText="Project List" fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../images/icons8_Xbox_Menu_32px.png" />
+                                <Image url="@../../images/icons8_Home_32px.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -89,6 +89,21 @@
                         <Insets left="50.0" />
                     </padding>
                 </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#tasks" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Tasks" textFill="#464242">
+               <font>
+                  <Font name="Corbel Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView accessibleText="Project List" fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8_Xbox_Menu_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
             </children>
         </VBox>
         <Pane layoutX="71.0" layoutY="44.0" prefHeight="145.0" prefWidth="142.0" style="-fx-background-color: f4f4f4;">

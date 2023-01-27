@@ -62,7 +62,7 @@
             <children>
                 <Label prefHeight="30.0" prefWidth="252.0" text="PROJECTS" textFill="#171717">
                     <font>
-                        <Font size="13.0" />
+                        <Font name="Corbel Bold" size="17.0" />
                     </font>
                     <padding>
                         <Insets left="40.0" />
@@ -71,17 +71,17 @@
                         <Insets top="60.0" />
                     </VBox.margin>
                 </Label>
-                <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Tasks" textFill="#5b5858">
+                <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#home" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Home" textFill="#464242">
                     <VBox.margin>
                         <Insets />
                     </VBox.margin>
                     <font>
-                        <Font size="13.0" />
+                        <Font name="Corbel Bold" size="14.0" />
                     </font>
                     <graphic>
                         <ImageView accessibleText="Project List" fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../images/icons8_Xbox_Menu_32px.png" />
+                                <Image url="@../../images/icons8_Home_32px.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -89,6 +89,21 @@
                         <Insets left="50.0" />
                     </padding>
                 </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#tasks" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Tasks" textFill="#464242">
+               <font>
+                  <Font name="Corbel Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView accessibleText="Project List" fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8_Xbox_Menu_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
             </children>
         </VBox>
         <Pane layoutX="71.0" layoutY="44.0" prefHeight="145.0" prefWidth="142.0" style="-fx-background-color: f4f4f4;">
@@ -103,6 +118,27 @@
                 <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
             </effect>
         </Pane>
-      <Pane fx:id="root" layoutX="222.0" layoutY="172.0" prefHeight="589.0" prefWidth="1174.0" />
+      <Pane fx:id="root" layoutX="222.0" layoutY="172.0" prefHeight="589.0" prefWidth="1174.0">
+         <children>
+            <Pane layoutX="152.0" layoutY="87.0" prefHeight="200.0" prefWidth="311.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+               <children>
+                  <ImageView fitHeight="55.0" fitWidth="101.0" layoutX="25.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8-task-planning-50.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="100.0" layoutY="37.0" prefHeight="23.0" prefWidth="179.0" text="All My Tasks" textFill="#1e2753">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="144.0" layoutY="90.0" prefHeight="66.0" prefWidth="77.0" text="19" textFill="#1e2753">
+                     <font>
+                        <Font name="Corbel Bold" size="66.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children></Pane>
     </children>
 </AnchorPane>

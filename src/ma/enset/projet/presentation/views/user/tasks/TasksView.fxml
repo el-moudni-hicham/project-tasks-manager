@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="626.0" prefWidth="1089.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <VBox prefHeight="626.0" prefWidth="1089.0" spacing="30.0">
+         <children>
+            <HBox>
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/check_inbox_32px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/arrow_32px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" top="9.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="33.0" prefWidth="271.0" text="Tasks">
+                     <font>
+                        <Font name="Corbel Bold" size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox prefHeight="39.0" prefWidth="708.0">
+               <children>
+                  <HBox prefHeight="40.0" prefWidth="787.0" spacing="20.0">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label prefHeight="23.0" prefWidth="131.0" text="All My Tasks">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Corbel Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+              <TableView prefHeight="326.0" prefWidth="780.0">
+                  <columns>
+                      <TableColumn prefWidth="75.0" text="Name" />
+                      <TableColumn prefWidth="95.0" text="Description" />
+                      <TableColumn prefWidth="140.0" text="Project" />
+                      <TableColumn prefWidth="188.0" text="Start Date" />
+                      <TableColumn prefWidth="148.0" text="End Date" />
+                      <TableColumn prefWidth="342.0" text="Actions" />
+                  </columns>
+              </TableView>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+         </padding>
+      </VBox>
+    </children>
+</AnchorPane>
