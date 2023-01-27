@@ -5,10 +5,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -46,7 +48,7 @@
             </HBox>
             <VBox prefHeight="39.0" prefWidth="708.0">
                <children>
-                  <HBox prefHeight="40.0" prefWidth="787.0" spacing="20.0">
+                  <HBox prefHeight="50.0" prefWidth="984.0">
                      <VBox.margin>
                         <Insets left="30.0" />
                      </VBox.margin>
@@ -59,23 +61,39 @@
                               <Font name="Corbel Bold" size="20.0" />
                            </font>
                         </Label>
+                        <Pane prefHeight="39.0" prefWidth="48.0" />
                         <Button fx:id="addUser" mnemonicParsing="false" onAction="#addUser" prefHeight="31.0" prefWidth="160.0" style="-fx-background-color: F9A80C; -fx-background-radius: 50;" text="Add New HR">
                            <font>
                               <Font name="Corbel Bold" size="14.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="24.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../images/Plus_32px.png" />
+                                    <Image url="@../../../images/icons8-add-user-male-48.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </Button>
+                        <Pane prefHeight="39.0" prefWidth="296.0" />
+                        <TextField fx:id="txtSearch" prefHeight="30.0" prefWidth="209.0" promptText="search" style="-fx-border-color: transparent; -fx-background-radius: 50;">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Pane prefHeight="39.0" prefWidth="8.0" />
+                        <ImageView fitHeight="38.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/icons8_Search_52px.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="9.0" />
+                           </HBox.margin>
+                        </ImageView>
                      </children>
                   </HBox>
                </children>
             </VBox>
-              <TableView fx:id="usersTableView" prefHeight="326.0" prefWidth="1091.0">
+              <TableView fx:id="usersTableView" prefHeight="406.0" prefWidth="1014.0">
                   <columns>
                   <TableColumn fx:id="colId" prefWidth="58.0" text="ID" />
                       <TableColumn fx:id="colNom" prefWidth="83.0" text="Nom " />

@@ -41,4 +41,9 @@ public class RhServiceImpl implements RhService{
     public List<ResourceHumaine> getAllRhs() {
         return rhd.findAll();
     }
+
+    @Override
+    public int countRh() {
+        return rhd.countRh();
+    }
 }

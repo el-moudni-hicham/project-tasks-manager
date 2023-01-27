@@ -11,4 +11,5 @@ public interface RhService {
     ResourceHumaine updateRh(ResourceHumaine rh);
     ResourceHumaine getRhById(int id);
     List<ResourceHumaine> getAllRhs();
+    int countRh();
 }

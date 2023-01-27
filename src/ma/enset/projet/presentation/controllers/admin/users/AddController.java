@@ -6,12 +6,16 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
+import javafx.scene.layout.AnchorPane;
 import ma.enset.projet.dao.ResourceHumaineDao;
 import ma.enset.projet.dao.ResourceHumaineDaoImpl;
 import ma.enset.projet.dao.entites.ResourceHumaine;
 
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -20,6 +24,10 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class AddController implements Initializable {
+
+    private Parent fxml;
+    @FXML
+    private AnchorPane root;
 
     @FXML
     private JFXTextField txtNom;
@@ -89,6 +97,15 @@ public class AddController implements Initializable {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText("User a ete ajouter avec succes");
             alert.show();
+
+            try {
+                fxml = FXMLLoader.load(getClass().getResource("../../../views/admin/users/UsersView.fxml"));
+                root.getChildren().removeAll();
+                root.getChildren().setAll(fxml);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
         }
     }
 

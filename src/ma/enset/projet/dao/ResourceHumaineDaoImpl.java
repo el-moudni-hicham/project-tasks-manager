@@ -148,8 +148,9 @@ public class ResourceHumaineDaoImpl implements ResourceHumaineDao{
         Connection connection = SingletonConnexionDB.getConnection();
         List<ResourceHumaine> users = new ArrayList();
         try {
-            PreparedStatement pstm = connection.prepareStatement("select * from RSOURCES_HUMAINE where NOM LIKE ?");
+            PreparedStatement pstm = connection.prepareStatement("select * from RESOURCES_HUMAINE where NOM LIKE ? OR PRENOM LIKE ?");
             pstm.setString(1, "%" + mc + "%");
+            pstm.setString(2, "%" + mc + "%");
             ResultSet rs = pstm.executeQuery();
 
             while (rs.next()) {
@@ -172,5 +173,22 @@ public class ResourceHumaineDaoImpl implements ResourceHumaineDao{
             e.printStackTrace();
         }
         return users;
+    }
+
+    @Override
+    public int countRh() {
+        Connection connection = SingletonConnexionDB.getConnection();
+        int number = 0;
+        try {
+            PreparedStatement pstm = connection.prepareStatement("select count(*) from RESOURCES_HUMAINE");
+            ResultSet rs = pstm.executeQuery();
+
+            while (rs.next()) {
+                number = rs.getInt(1);
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return number;
     }
 }
