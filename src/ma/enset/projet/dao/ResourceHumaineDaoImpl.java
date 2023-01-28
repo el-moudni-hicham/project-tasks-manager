@@ -3,10 +3,7 @@ package ma.enset.projet.dao;
 import ma.enset.projet.dao.entites.ResourceHumaine;
 
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -154,6 +151,41 @@ public class ResourceHumaineDaoImpl implements ResourceHumaineDao{
             pstm.setString(4, email);
             pstm.setString(5, telephone);
             pstm.setInt(6,id);
+            pstm.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public String getName(int id) {
+            String adminName = "";
+            Connection connection = SingletonConnexionDB.getConnection();
+
+            PreparedStatement pstm = null;
+            try {
+                pstm = connection.prepareStatement("SELECT nom,prenom FROM RESOURCES_HUMAINE WHERE id=?");
+                pstm.setInt(1,id);
+                ResultSet rs = pstm.executeQuery();
+                while (rs.next()) {
+                    adminName = rs.getString("nom")+" "+rs.getString("prenom");
+
+                }
+
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            return adminName;
+    }
+
+    @Override
+    public void updateLogin(int id, String username, String password) {
+        Connection connection = SingletonConnexionDB.getConnection();
+        try {
+            PreparedStatement pstm = connection.prepareStatement("UPDATE RESOURCES_HUMAINE SET USERNAME=?,PASSWORD=? WHERE ID=?");
+            pstm.setString(1,username);
+            pstm.setString(2,password);
+            pstm.setInt(3,id);
             pstm.executeUpdate();
         } catch (SQLException e){
             e.printStackTrace();

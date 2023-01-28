@@ -8,16 +8,27 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Side;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Screen;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import ma.enset.projet.dao.ResourceHumaineDao;
 import ma.enset.projet.dao.ResourceHumaineDaoImpl;
+import ma.enset.projet.presentation.controllers.admin.profile.ProfieController;
 import ma.enset.projet.services.RhService;
 import ma.enset.projet.services.RhServiceImpl;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -33,11 +44,38 @@ public class DashboardController implements Initializable {
     private Label rhNumber;
     @FXML
     private PieChart chart;
-
-
-
     @FXML
-    private Label username;
+    private Label nameUser;
+    @FXML
+    private Button username;
+
+
+    private int adminId;
+
+    private String UserRole;
+    Stage stage;
+
+    public String getUserRole() {
+        return UserRole;
+    }
+
+    public void setUserRole(String userRole) {
+        UserRole = userRole;
+    }
+
+    public int getAdminId() {
+        return adminId;
+    }
+
+    public void setAdminId(int adminId) {
+        this.adminId = adminId;
+    }
+
+    ResourceHumaineDao rhd = new ResourceHumaineDaoImpl();
+    public void getAdminName(int id){
+            username.setText(rhd.getName(id));
+    }
+
     RhService rhs;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -58,9 +96,9 @@ public class DashboardController implements Initializable {
     @FXML
     void home(ActionEvent event) {
         try {
-            fxml = FXMLLoader.load(getClass().getResource("../../views/admin/AdminDashboard.fxml"));
-            parent.getChildren().removeAll();
-            parent.getChildren().setAll(fxml);
+            fxml = FXMLLoader.load(getClass().getResource("../../views/admin/HomeView.fxml"));
+            root.getChildren().removeAll();
+            root.getChildren().setAll(fxml);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -107,6 +145,39 @@ public class DashboardController implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @FXML
+    void profile(ActionEvent event) throws SQLException {
+            FXMLLoader Loader = new FXMLLoader();
+
+            Loader.setLocation(getClass().getResource("../../views/admin/profile/profileView.fxml"));
+
+            try {
+                Loader.load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            ProfieController adminProfile = Loader.getController();
+            adminProfile.setAdminId(getAdminId());
+            adminProfile.setAdminInfo(getAdminId());
+            adminProfile.setUserRole(getUserRole());
+
+            Parent parent = Loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(parent));
+            stage.initStyle(StageStyle.UTILITY);
+            stage.show();
+        /*
+            Parent p = Loader.getRoot();
+            stage = (Stage) root.getScene().getWindow();
+            Scene scene = new Scene(p, Screen.getPrimary().getVisualBounds().getWidth(), Screen.getPrimary().getVisualBounds().getHeight());
+            stage.setScene(scene);
+            stage.show();
+
+         */
+
     }
 
     @FXML

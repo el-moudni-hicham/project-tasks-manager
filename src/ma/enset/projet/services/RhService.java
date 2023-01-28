@@ -9,6 +9,7 @@ public interface RhService {
     void deleteRh(ResourceHumaine rh);
     List<ResourceHumaine> searchRhByQuery(String mc);
     void updateRh(int id, String nom,String prenom,String fonction,String email,String telephone);
+    void updateLofinInfo(int id, String username, String password);
     ResourceHumaine getRhById(int id);
     List<ResourceHumaine> getAllRhs();
     int countRh();

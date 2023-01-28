@@ -119,13 +119,8 @@
                   <Font name="Corbel Bold" size="14.0" />
                </font>
             </Button>
-            <Pane prefHeight="189.0" prefWidth="256.0" />
-            <Label fx:id="username" textFill="#e7e5e5">
-               <VBox.margin>
-                  <Insets bottom="20.0" top="10.0" />
-               </VBox.margin>
-            </Label>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/admin/style.css" text="Profile">
+            <Pane prefHeight="201.0" prefWidth="256.0" />
+            <Button fx:id="username" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#profile" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/admin/style.css">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -163,7 +158,7 @@
                <children>
                   <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../images/icons8-dashboard-layout-24%20(1).png" />
+                        <Image url="@../../images/icons8-dashboard-layout-24.png" />
                      </image>
                      <HBox.margin>
                         <Insets top="5.0" />

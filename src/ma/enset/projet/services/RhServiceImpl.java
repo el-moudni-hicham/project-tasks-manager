@@ -32,6 +32,11 @@ public class RhServiceImpl implements RhService{
         rhd.updateRh(id, nom, prenom, fonction, email, telephone);
     }
 
+    @Override
+    public void updateLofinInfo(int id, String username, String password) {
+        rhd.updateLogin(id,username,password);
+    }
+
 
     @Override
     public ResourceHumaine getRhById(int id) {

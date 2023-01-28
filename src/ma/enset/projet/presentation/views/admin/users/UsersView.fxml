@@ -96,16 +96,13 @@
               <TableView fx:id="usersTableView" prefHeight="406.0" prefWidth="1014.0">
                   <columns>
                   <TableColumn fx:id="colId" prefWidth="58.0" text="ID" />
-                      <TableColumn fx:id="colNom" prefWidth="83.0" text="Nom " />
-                      <TableColumn fx:id="colPrenom" prefWidth="84.0" text="Prenom" />
-                      <TableColumn fx:id="colDateN" prefWidth="97.0" text="Date Naissance" />
-                  <TableColumn fx:id="colFonction" prefWidth="76.0" text="Fonction" />
-                  <TableColumn fx:id="colDisponible" prefWidth="98.0" text="Disponobilite" />
-                  <TableColumn fx:id="colDateI" prefWidth="102.0" text="Date Incsription" />
-                  <TableColumn fx:id="colRole" prefWidth="86.0" text="Role" />
-                      <TableColumn fx:id="colTelephone" prefWidth="107.0" text="Telephone " />
-                      <TableColumn fx:id="colEmail" minWidth="0.0" prefWidth="113.0" text="Email" />
-                  <TableColumn fx:id="colActions" minWidth="0.0" prefWidth="109.0" text="Actions" />
+                      <TableColumn fx:id="colNom" prefWidth="94.99996948242188" text="Nom " />
+                      <TableColumn fx:id="colPrenom" prefWidth="99.0" text="Prenom" />
+                  <TableColumn fx:id="colFonction" prefWidth="149.0" text="Fonction" />
+                  <TableColumn fx:id="colDisponible" prefWidth="94.0" text="Disponobilite" />
+                      <TableColumn fx:id="colTelephone" prefWidth="175.0" text="Telephone " />
+                      <TableColumn fx:id="colEmail" minWidth="0.0" prefWidth="195.0" text="Email" />
+                  <TableColumn fx:id="colActions" minWidth="0.0" prefWidth="150.0" text="Actions" />
                   </columns>
               </TableView>
          </children>

@@ -48,8 +48,8 @@ public class UsersController implements Initializable {
     @FXML
     private TableColumn<ResourceHumaine, String> colPrenom;
 
-    @FXML
-    private TableColumn<ResourceHumaine, String> colDateN;
+    //@FXML
+    //private TableColumn<ResourceHumaine, String> colDateN;
 
     @FXML
     private TableColumn<ResourceHumaine, String> colFonction;
@@ -57,11 +57,11 @@ public class UsersController implements Initializable {
     @FXML
     private TableColumn<ResourceHumaine, Boolean> colDisponible;
 
-    @FXML
-    private TableColumn<ResourceHumaine, String> colDateI;
+    //@FXML
+    //private TableColumn<ResourceHumaine, String> colDateI;
 
-    @FXML
-    private TableColumn<ResourceHumaine, String> colRole;
+    //@FXML
+    //private TableColumn<ResourceHumaine, String> colRole;
 
     @FXML
     private TableColumn<ResourceHumaine, String> colTelephone;
@@ -91,11 +91,11 @@ public class UsersController implements Initializable {
         colNom.setCellValueFactory(new PropertyValueFactory<>("nom"));
         colPrenom.setCellValueFactory(new PropertyValueFactory<>("prenom"));
         colFonction.setCellValueFactory(new PropertyValueFactory<>("fonction"));
-        colDateN.setCellValueFactory(new PropertyValueFactory<>("date_naissance"));
+        //colDateN.setCellValueFactory(new PropertyValueFactory<>("date_naissance"));
         colTelephone.setCellValueFactory(new PropertyValueFactory<>("telephone"));
         colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
-        colDateI.setCellValueFactory(new PropertyValueFactory<>("date_insc"));
-        colRole.setCellValueFactory(new PropertyValueFactory<>("role"));
+        //colDateI.setCellValueFactory(new PropertyValueFactory<>("date_insc"));
+        //colRole.setCellValueFactory(new PropertyValueFactory<>("role"));
         colDisponible.setCellValueFactory(new PropertyValueFactory<>("disponible"));
 
 
