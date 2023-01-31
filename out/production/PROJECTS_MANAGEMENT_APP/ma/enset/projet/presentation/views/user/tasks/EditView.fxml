@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.user.tasks.EditController">
+   <children>
+      <VBox layoutY="-6.0" prefHeight="594.0" prefWidth="893.0" spacing="20.0">
+         <children>
+            <Label prefHeight="37.0" prefWidth="255.0" text="Edit Task Statut" textFill="#1e2753">
+               <font>
+                  <Font name="Corbel Bold" size="32.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="186.0" prefWidth="793.0" spacing="10.0">
+               <children>
+                  <Label text="Task Statut">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="104.0" text="Current Statut">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="34.0" prefWidth="217.0" />
+                        <JFXTextField fx:id="txtSatut" prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+                  <Label prefHeight="27.0" prefWidth="130.0" text="Edit Statut">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <JFXToggleButton fx:id="toggleBtn" text="NOT COMPLETED" />
+               </children>
+            </VBox>
+            <VBox prefHeight="11.0" prefWidth="793.0" spacing="10.0" />
+            <Button mnemonicParsing="false" onAction="#editStatut" prefHeight="27.0" prefWidth="89.0" style="-fx-background-color: F9A80C; -fx-background-radius: 50;" text="Edit">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
