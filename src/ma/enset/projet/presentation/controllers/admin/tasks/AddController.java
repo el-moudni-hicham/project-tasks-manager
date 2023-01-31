@@ -148,8 +148,6 @@ public class AddController implements Initializable {
                 throw new RuntimeException(e);
             }
 
-            //final String username = "hichamlmodni@gmail.com";
-            //final String password = "pyoxoiuicfspilbd";
             final String username = "email";
             final String password = "password";
 
