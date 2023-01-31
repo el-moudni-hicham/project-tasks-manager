@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.admin.profile.ProfieController">
+   <children>
+      <VBox layoutY="-1.0" prefHeight="638.0" prefWidth="893.0" spacing="20.0">
+         <children>
+            <Label prefHeight="37.0" prefWidth="348.0" text="Profile Settings" textFill="#1e2753">
+               <font>
+                  <Font name="Corbel Bold" size="32.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="233.0" prefWidth="821.0" spacing="10.0">
+               <children>
+                  <Label text="User Details">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Nom">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Pane prefHeight="34.0" prefWidth="217.0" />
+                        <JFXTextField fx:id="txtNom" prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Prenom">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                        <JFXTextField fx:id="txtPrenom" prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Date de Naissance">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Pane prefHeight="25.0" prefWidth="134.0" />
+                        <JFXTextField fx:id="txtDate" prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Fonction">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Pane prefHeight="25.0" prefWidth="191.0" />
+                        <JFXTextField fx:id="txtFonction" prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="194.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <Label text="Contact Info">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Telephone">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Pane prefHeight="36.0" prefWidth="187.0" />
+                        <JFXTextField fx:id="txtTelephone" prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Email">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Pane prefHeight="36.0" prefWidth="216.0" />
+                        <JFXTextField fx:id="txtEmail" prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="194.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <Label text="Login Info">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Username">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="36.0" prefWidth="187.0" />
+                        <JFXTextField fx:id="txtUsername" prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Password">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="25.0" prefWidth="190.0" />
+                        <JFXTextField fx:id="txtPassword" prefHeight="25.0" prefWidth="204.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="53.0" prefWidth="793.0" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#editProfile" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: F9A80C; -fx-background-radius: 50;" text="Edit Login Info">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#saveProfile" prefHeight="27.0" prefWidth="89.0" style="-fx-background-color: F9A80C; -fx-background-radius: 50;" text="Save">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

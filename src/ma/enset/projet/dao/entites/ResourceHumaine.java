@@ -148,4 +148,9 @@ public class ResourceHumaine implements Serializable {
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
+
+    @Override
+    public String toString() {
+        return nom+" "+prenom;
+    }
 }

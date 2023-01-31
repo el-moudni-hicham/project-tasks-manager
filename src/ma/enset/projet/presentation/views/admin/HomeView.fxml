@@ -24,7 +24,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Label prefHeight="33.0" prefWidth="271.0" text="Home Dashboard">
+                  <Label prefHeight="33.0" prefWidth="271.0" text="Admin Dashboard">
                      <font>
                         <Font name="Corbel Bold" size="28.0" />
                      </font>
@@ -60,7 +60,7 @@
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label layoutX="133.0" layoutY="76.0" prefHeight="66.0" prefWidth="77.0" text="17" textFill="#1e2753">
+                  <Label fx:id="matNumber" layoutX="133.0" layoutY="76.0" prefHeight="66.0" prefWidth="77.0" textFill="#1e2753">
                      <font>
                         <Font name="Corbel Bold" size="66.0" />
                      </font>
@@ -79,7 +79,7 @@
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label layoutX="139.0" layoutY="72.0" prefHeight="66.0" prefWidth="77.0" text="8" textFill="#0cdef7">
+                  <Label fx:id="prjNumber" layoutX="139.0" layoutY="72.0" prefHeight="66.0" prefWidth="77.0" textFill="#0cdef7">
                      <font>
                         <Font name="Corbel Bold" size="66.0" />
                      </font>

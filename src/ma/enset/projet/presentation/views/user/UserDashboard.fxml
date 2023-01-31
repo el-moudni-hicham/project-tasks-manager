@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="parent" nodeOrientation="LEFT_TO_RIGHT" prefHeight="744.0" prefWidth="1410.0" stylesheets="@../../css/user/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.user.DashboardController">
+<AnchorPane id="AnchorPane" fx:id="parent" nodeOrientation="LEFT_TO_RIGHT" prefHeight="744.0" prefWidth="1410.0" stylesheets="@../../css/user/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.user.UserDashboardController">
     <children>
         <Pane layoutX="-2.0" prefHeight="145.0" prefWidth="1062.0" styleClass="head-background" stylesheets="@../../css/user/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -26,7 +26,7 @@
                         <Font name="System Bold" size="11.0" />
                     </font>
                 </Label>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="1137.0" layoutY="26.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" style="-fx-background-color: transparent;" stylesheets="@../../css/admin/style.css" text="Profile">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="1137.0" layoutY="26.0" mnemonicParsing="false" onAction="#profile" prefHeight="42.0" prefWidth="259.0" style="-fx-background-color: transparent;" text="Profile">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -41,7 +41,7 @@
                   <Font name="Corbel Bold" size="19.0" />
                </font>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="1144.0" layoutY="79.0" mnemonicParsing="false" onAction="#signOut" prefHeight="42.0" prefWidth="259.0" style="-fx-background-color: transparent;" stylesheets="@../../css/admin/style.css" text="Sign Out">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="1144.0" layoutY="79.0" mnemonicParsing="false" onAction="#signOut" prefHeight="42.0" prefWidth="259.0" style="-fx-background-color: transparent;" text="Sign Out">
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -71,24 +71,6 @@
                         <Insets top="60.0" />
                     </VBox.margin>
                 </Label>
-                <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#home" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Home" textFill="#464242">
-                    <VBox.margin>
-                        <Insets />
-                    </VBox.margin>
-                    <font>
-                        <Font name="Corbel Bold" size="14.0" />
-                    </font>
-                    <graphic>
-                        <ImageView accessibleText="Project List" fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../images/icons8_Home_32px.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                    <padding>
-                        <Insets left="50.0" />
-                    </padding>
-                </JFXButton>
             <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#tasks" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Tasks" textFill="#464242">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
@@ -132,7 +114,7 @@
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label layoutX="144.0" layoutY="90.0" prefHeight="66.0" prefWidth="77.0" text="19" textFill="#1e2753">
+                  <Label fx:id="NbTasks" layoutX="144.0" layoutY="90.0" prefHeight="66.0" prefWidth="77.0" textFill="#1e2753">
                      <font>
                         <Font name="Corbel Bold" size="66.0" />
                      </font>

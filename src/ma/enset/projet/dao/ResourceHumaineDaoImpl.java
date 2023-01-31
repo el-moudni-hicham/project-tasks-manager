@@ -42,7 +42,8 @@ public class ResourceHumaineDaoImpl implements ResourceHumaineDao{
         Connection connection = SingletonConnexionDB.getConnection();
         List<ResourceHumaine> users = new ArrayList<>();
         try {
-            PreparedStatement pstm = connection.prepareStatement("select * from RESOURCES_HUMAINE");
+            PreparedStatement pstm = connection.prepareStatement("select * from RESOURCES_HUMAINE WHERE ROLE=?");
+            pstm.setString(1,"USER");
             ResultSet rs = pstm.executeQuery();
 
             while (rs.next()) {

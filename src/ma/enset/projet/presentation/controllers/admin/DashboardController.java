@@ -10,18 +10,21 @@ import javafx.geometry.Side;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import ma.enset.projet.dao.MaterielleDaoImpl;
+import ma.enset.projet.dao.ProjetDaoImpl;
 import ma.enset.projet.dao.ResourceHumaineDao;
 import ma.enset.projet.dao.ResourceHumaineDaoImpl;
 import ma.enset.projet.presentation.controllers.admin.profile.ProfieController;
-import ma.enset.projet.services.RhService;
-import ma.enset.projet.services.RhServiceImpl;
+import ma.enset.projet.services.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -31,6 +34,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Initializable {
@@ -42,6 +46,10 @@ public class DashboardController implements Initializable {
     private Pane root;
     @FXML
     private Label rhNumber;
+    @FXML
+    private Label matNumber;
+    @FXML
+    private Label prjNumber;
     @FXML
     private PieChart chart;
     @FXML
@@ -77,16 +85,21 @@ public class DashboardController implements Initializable {
     }
 
     RhService rhs;
+    MaterielleService ms;
+    ProjetService ps;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         rhs = new RhServiceImpl(new ResourceHumaineDaoImpl());
+        ms = new MaterielleServiceImpl(new MaterielleDaoImpl());
+        ps = new ProjetServiceImpl(new ProjetDaoImpl());
         rhNumber.setText(String.valueOf(rhs.countRh()));
-
+        matNumber.setText(String.valueOf(ms.countMat()));
+        prjNumber.setText(String.valueOf(ps.countProjects()));
         ObservableList<PieChart.Data> pieChartData =
                 FXCollections.observableArrayList(
                         new PieChart.Data("Human Resources", rhs.countRh()),
-                        new PieChart.Data("Material Resources", 25),
-                        new PieChart.Data("Projects", 10)
+                        new PieChart.Data("Material Resources", ms.countMat()),
+                        new PieChart.Data("Projects", ps.countProjects())
                         );
         chart.setData(pieChartData);
         chart.setTitle("Application Statistics");
@@ -183,9 +196,14 @@ public class DashboardController implements Initializable {
     @FXML
     void signOut(ActionEvent event) {
         try {
-            fxml = FXMLLoader.load(getClass().getResource("../../views/Login.fxml"));
-            parent.getChildren().removeAll();
-            parent.getChildren().setAll(fxml);
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setContentText("Are you sure you would like to log out ?");
+            Optional<ButtonType> optional = alert.showAndWait();
+            if (optional.get() == ButtonType.OK) {
+                fxml = FXMLLoader.load(getClass().getResource("../../views/Login.fxml"));
+                parent.getChildren().removeAll();
+                parent.getChildren().setAll(fxml);
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

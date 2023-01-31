@@ -5,10 +5,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -71,16 +73,30 @@
                               </ImageView>
                            </graphic>
                         </Button>
+                        <Pane prefHeight="40.0" prefWidth="330.0" />
+                        <TextField fx:id="txtSearch" prefHeight="30.0" prefWidth="209.0" promptText="search" style="-fx-border-color: transparent; -fx-background-radius: 50;">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <ImageView fitHeight="38.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/icons8_Search_52px.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="9.0" />
+                           </HBox.margin>
+                        </ImageView>
                      </children>
                   </HBox>
                </children>
             </VBox>
-              <TableView prefHeight="326.0" prefWidth="780.0">
+              <TableView fx:id="matsTableView" prefHeight="326.0" prefWidth="780.0">
                   <columns>
-                      <TableColumn prefWidth="75.0" text="Name" />
-                      <TableColumn prefWidth="227.0" text="Caractiristiques" />
-                      <TableColumn prefWidth="363.0" text="Quantite" />
-                      <TableColumn prefWidth="322.0" text="Actions" />
+                      <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="colNom" prefWidth="227.0" text="Name" />
+                      <TableColumn fx:id="colCar" prefWidth="363.0" text="Features" />
+                      <TableColumn fx:id="colActions" prefWidth="322.0" text="Actions" />
                   </columns>
               </TableView>
          </children>

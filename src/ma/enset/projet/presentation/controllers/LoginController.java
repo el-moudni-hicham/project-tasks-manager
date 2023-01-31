@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 import ma.enset.projet.dao.ResourceHumaineDaoImpl;
 import ma.enset.projet.dao.entites.ResourceHumaine;
 import ma.enset.projet.presentation.controllers.admin.DashboardController;
+import ma.enset.projet.presentation.controllers.user.UserDashboardController;
 
 import java.io.IOException;
 import java.net.URL;
@@ -86,9 +87,28 @@ public class LoginController implements Initializable {
 
 
                 }else{
-                    Parent menu = FXMLLoader.load(getClass().getResource("../views/user/UserDashboard.fxml"));
-                    content.getChildren().removeAll();
-                    content.getChildren().setAll(menu);
+                    //Parent menu = FXMLLoader.load(getClass().getResource("../views/user/UserDashboard.fxml"));
+                    //content.getChildren().removeAll();
+                    //content.getChildren().setAll(menu);
+                    Loader.setLocation(getClass().getResource("../views/user/UserDashboard.fxml"));
+                    idAdmin = rh.getId();
+                    try{
+                        Loader.load();
+                    } catch (Exception e){
+                        e.printStackTrace();
+                    }
+
+                    UserDashboardController userDashboardController = Loader.getController();
+                    userDashboardController.setAdminId(idAdmin);
+                    userDashboardController.setUserRole(role);
+                    userDashboardController.setNbTasks(idAdmin);
+
+                    Parent p = Loader.getRoot();
+                    stage = (Stage) content.getScene().getWindow();
+                    Scene scene = new Scene(p, Screen.getPrimary().getVisualBounds().getWidth(), Screen.getPrimary().getVisualBounds().getHeight());
+                    stage.setScene(scene);
+                    stage.centerOnScreen();
+                    stage.show();
                 }
             }else{
                 Alert alert = new Alert(Alert.AlertType.ERROR);

@@ -6,7 +6,15 @@ public class Materiele implements Serializable {
     private int id;
     private String nom;
     private String caracteristique;
-    private int quantite;
+
+    public Materiele() {
+    }
+
+    public Materiele(int id, String nom, String caracteristique) {
+        this.id = id;
+        this.nom = nom;
+        this.caracteristique = caracteristique;
+    }
 
     public int getId() {
         return id;
@@ -32,11 +40,8 @@ public class Materiele implements Serializable {
         this.caracteristique = caracteristique;
     }
 
-    public int getQuantite() {
-        return quantite;
-    }
-
-    public void setQuantite(int quantite) {
-        this.quantite = quantite;
+    @Override
+    public String toString() {
+        return nom;
     }
 }

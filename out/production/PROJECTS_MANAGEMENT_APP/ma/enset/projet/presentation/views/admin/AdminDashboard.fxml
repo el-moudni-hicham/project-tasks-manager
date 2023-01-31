@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" prefWidth="1290.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.admin.DashboardController">
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" prefWidth="1358.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.admin.DashboardController">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="-7.0" layoutY="-15.0" prefHeight="744.0" prefWidth="256.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -74,21 +74,6 @@
                   <Font name="Corbel Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btnMenus" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#tasks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/admin/style.css" text="Tasks">
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../images/icons8_Xbox_Menu_32px.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <padding>
-                  <Insets left="50.0" />
-               </padding>
-               <font>
-                  <Font name="Corbel Bold" size="14.0" />
-               </font>
-            </Button>
             <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#materials" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/admin/style.css" text="Material Resources">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -104,22 +89,7 @@
                   <Font name="Corbel Bold" size="14.0" />
                </font>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/admin/style.css" text="Gantt">
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../images/icons8_Slider__32px.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <padding>
-                  <Insets left="50.0" />
-               </padding>
-               <font>
-                  <Font name="Corbel Bold" size="14.0" />
-               </font>
-            </Button>
-            <Pane prefHeight="201.0" prefWidth="256.0" />
+            <Pane prefHeight="298.0" prefWidth="256.0" />
             <Button fx:id="username" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#profile" prefHeight="42.0" prefWidth="259.0" stylesheets="@../../css/admin/style.css">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
@@ -152,7 +122,7 @@
             </Button>
          </children>
       </VBox>
-      <Pane fx:id="root" layoutX="237.0" prefHeight="744.0" prefWidth="1054.0">
+      <Pane fx:id="root" layoutX="237.0" prefHeight="720.0" prefWidth="1118.0">
          <children>
             <HBox layoutX="49.0" layoutY="33.0">
                <children>
@@ -164,7 +134,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Label prefHeight="33.0" prefWidth="271.0" text="Home Dashboard">
+                  <Label prefHeight="33.0" prefWidth="271.0" text="Admin Dashboard">
                      <font>
                         <Font name="Corbel Bold" size="28.0" />
                      </font>
@@ -200,7 +170,7 @@
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label layoutX="133.0" layoutY="76.0" prefHeight="66.0" prefWidth="77.0" text="17" textFill="#1e2753">
+                  <Label fx:id="matNumber" layoutX="133.0" layoutY="76.0" prefHeight="66.0" prefWidth="77.0" textFill="#1e2753">
                      <font>
                         <Font name="Corbel Bold" size="66.0" />
                      </font>
@@ -219,7 +189,7 @@
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label layoutX="139.0" layoutY="72.0" prefHeight="66.0" prefWidth="77.0" text="8" textFill="#0cdef7">
+                  <Label fx:id="prjNumber" layoutX="139.0" layoutY="72.0" prefHeight="66.0" prefWidth="77.0" textFill="#0cdef7">
                      <font>
                         <Font name="Corbel Bold" size="66.0" />
                      </font>
@@ -234,6 +204,11 @@
             <PieChart fx:id="chart" layoutX="506.0" layoutY="223.0" prefHeight="299.0" prefWidth="471.0" />
          </children>
       </Pane>
+      <Label layoutX="1269.0" layoutY="724.0" text="Powered by HYM">
+         <font>
+            <Font name="Corbel Bold" size="10.0" />
+         </font>
+      </Label>
    </children>
    
 </AnchorPane>

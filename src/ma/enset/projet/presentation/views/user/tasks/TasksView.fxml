@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="626.0" prefWidth="1089.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="root" prefHeight="626.0" prefWidth="1188.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.user.tasks.TasksController">
     <children>
-      <VBox prefHeight="626.0" prefWidth="1089.0" spacing="30.0">
+      <VBox prefHeight="626.0" prefWidth="1195.0" spacing="30.0">
          <children>
             <HBox>
                <children>
@@ -62,16 +62,17 @@
                   </HBox>
                </children>
             </VBox>
-              <TableView prefHeight="326.0" prefWidth="780.0">
-                  <columns>
-                      <TableColumn prefWidth="75.0" text="Name" />
-                      <TableColumn prefWidth="95.0" text="Description" />
-                      <TableColumn prefWidth="140.0" text="Project" />
-                      <TableColumn prefWidth="188.0" text="Start Date" />
-                      <TableColumn prefWidth="148.0" text="End Date" />
-                      <TableColumn prefWidth="342.0" text="Actions" />
-                  </columns>
-              </TableView>
+            <TableView fx:id="tachesTableView" prefHeight="326.0" prefWidth="780.0">
+               <columns>
+                  <TableColumn fx:id="colName" prefWidth="96.0" text="Name" />
+                  <TableColumn fx:id="colDesc" prefWidth="184.0" text="Description" />
+                  <TableColumn fx:id="colStart" prefWidth="166.0" text="Start Date" />
+                  <TableColumn fx:id="colEnd" prefWidth="179.0" text="End Date" />
+                  <TableColumn fx:id="colStatu" prefWidth="118.0" text="Statut" />
+                  <TableColumn fx:id="colManager" prefWidth="214.0" text="Projet" />
+                  <TableColumn fx:id="colActions" prefWidth="137.0" text="Edit Task Statut" />
+               </columns>
+            </TableView>
          </children>
          <padding>
             <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />

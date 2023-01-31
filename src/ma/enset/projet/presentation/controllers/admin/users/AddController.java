@@ -14,6 +14,8 @@ import javafx.scene.layout.AnchorPane;
 import ma.enset.projet.dao.ResourceHumaineDao;
 import ma.enset.projet.dao.ResourceHumaineDaoImpl;
 import ma.enset.projet.dao.entites.ResourceHumaine;
+import ma.enset.projet.services.RhService;
+import ma.enset.projet.services.RhServiceImpl;
 
 import java.io.IOException;
 import java.net.URL;
@@ -64,7 +66,7 @@ public class AddController implements Initializable {
         if(txtNom.getText().isEmpty() || txtPrenom.getText().isEmpty() || txtFonction.getText().isEmpty()
                 || txtTelephone.getText().isEmpty() || txtEmail.getText().isEmpty()){
             Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setContentText("Veuillez remplir tout les champs !");
+            alert.setContentText("Please complete all fields !");
             alert.show();
         }else{
             String nom = txtNom.getText();
@@ -84,18 +86,18 @@ public class AddController implements Initializable {
             rh.setNom(nom);
             rh.setPrenom(prenom);
             rh.setFonction(fonction);
-            rh.setDate_naissance(String.valueOf(d_naiss));
+            rh.setDate_naissance(d_naiss.getYear()+"-"+d_naiss.getMonth()+"-"+d_naiss.getDate());
             rh.setTelephone(telephone);
             rh.setEmail(email);
             rh.setUsername(nom+" "+prenom);
             rh.setPassword(nom+year);
             rh.setRole(role);
 
-            ResourceHumaineDao rhd = new ResourceHumaineDaoImpl();
-            rhd.save(rh);
+            RhService rhs = new RhServiceImpl(new ResourceHumaineDaoImpl());
+            rhs.addRh(rh);
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setContentText("User a ete ajouter avec succes");
+            alert.setContentText("User added successfully ");
             alert.show();
 
             try {

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.admin.materials.AddController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.projet.presentation.controllers.admin.materials.AddController">
    <children>
       <VBox layoutY="-1.0" prefHeight="594.0" prefWidth="893.0" spacing="20.0">
          <children>
@@ -43,23 +43,13 @@
                               <Font size="14.0" />
                            </font></Label>
                         <Pane prefHeight="36.0" prefWidth="163.0" />
-                        <JFXTextField fx:id="txtPrenom" prefHeight="25.0" prefWidth="204.0" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="500.0">
-                     <children>
-                        <Label text="Quantite">
-                           <font>
-                              <Font size="14.0" />
-                           </font></Label>
-                        <Pane prefHeight="36.0" prefWidth="204.0" />
-                        <JFXTextField fx:id="txtFonction" prefHeight="25.0" prefWidth="204.0" />
+                        <JFXTextField fx:id="txtCar" prefHeight="25.0" prefWidth="204.0" />
                      </children>
                   </HBox>
                </children>
             </VBox>
             <VBox prefHeight="11.0" prefWidth="793.0" spacing="10.0" />
-            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="89.0" style="-fx-background-color: F9A80C; -fx-background-radius: 50;" text="Ajouter">
+            <Button mnemonicParsing="false" onAction="#addMat" prefHeight="27.0" prefWidth="89.0" style="-fx-background-color: F9A80C; -fx-background-radius: 50;" text="Ajouter">
                <font>
                   <Font size="14.0" />
                </font></Button>

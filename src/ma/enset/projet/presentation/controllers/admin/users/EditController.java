@@ -52,8 +52,10 @@ public class EditController implements Initializable {
 
     @FXML
     private JFXTextField txtEmail;
+
     ObservableList<String> observableList = FXCollections.observableArrayList();
     List<String> list = new ArrayList<>();
+
     private boolean update;
     int rhId;
     RhService rhs;

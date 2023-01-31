@@ -1,4 +1,4 @@
 .head-background
 {
-    -fx-background-color: linear-gradient(to left, rgba(255, 165, 0, 0.75) 50%, cyan);
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, rgba(255, 165, 0, 0.75), cyan);
 }

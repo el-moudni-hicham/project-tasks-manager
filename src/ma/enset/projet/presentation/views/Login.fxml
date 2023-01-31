@@ -60,16 +60,6 @@
                               <Insets right="10.0" />
                            </padding>
                         </HBox>
-                        <Label layoutX="486.0" layoutY="296.0" text="Forget Password?" textFill="#8d8989">
-                           <font>
-                              <Font name="Berlin Sans FB" size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="693.0" layoutY="295.0" text="Register" textFill="#8d8989">
-                           <font>
-                              <Font name="Berlin Sans FB" size="16.0" />
-                           </font>
-                        </Label>
                         <JFXButton layoutX="486.0" layoutY="376.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#handel_login" prefHeight="35.0" prefWidth="260.0" style="-fx-background-color: #FFCD07; -fx-background-radius: 50px;" text="LOG IN" />
                         <ImageView fitHeight="150.0" fitWidth="126.0" layoutX="570.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>

@@ -96,7 +96,7 @@ public class UsersController implements Initializable {
         colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
         //colDateI.setCellValueFactory(new PropertyValueFactory<>("date_insc"));
         //colRole.setCellValueFactory(new PropertyValueFactory<>("role"));
-        colDisponible.setCellValueFactory(new PropertyValueFactory<>("disponible"));
+        //colDisponible.setCellValueFactory(new PropertyValueFactory<>("disponible"));
 
 
 
@@ -121,6 +121,10 @@ public class UsersController implements Initializable {
                         Image image1 = new Image("ma/enset/projet/presentation/images/icons8-delete-user-male-28.png");
                         ImageView deleteIcon = new ImageView();
                         deleteIcon.setImage(image1);
+
+                        Image image2 = new Image("ma/enset/projet/presentation/images/icons8-mail-27.png");
+                        ImageView mailIcon = new ImageView();
+                        mailIcon.setImage(image2);
 
                         deleteIcon.setOnMouseClicked((MouseEvent event) -> {
 
@@ -166,13 +170,35 @@ public class UsersController implements Initializable {
                             //loadUsers();
                         });
 
+                        mailIcon.setOnMouseClicked((MouseEvent event) -> {
+                            rh = usersTableView.getSelectionModel().getSelectedItem();
+                            FXMLLoader loader = new FXMLLoader ();
+                            loader.setLocation(getClass().getResource("../../../views/admin/users/mailView.fxml"));
+
+                            try {
+                                loader.load();
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
 
 
-                        HBox managebtn = new HBox(editIcon, deleteIcon);
+                            MailController editController = loader.getController();
+
+                            editController.setIdRH(rh.getId());
+                            Parent parent = loader.getRoot();
+                            Stage stage = new Stage();
+                            stage.setScene(new Scene(parent));
+                            stage.initStyle(StageStyle.UTILITY);
+                            stage.show();
+                            //loadUsers();
+                        });
+
+
+                        HBox managebtn = new HBox(editIcon, deleteIcon, mailIcon);
                         managebtn.setStyle("-fx-alignment:center");
                         HBox.setMargin(editIcon, new Insets(2, 3, 0, 2));
                         HBox.setMargin(deleteIcon, new Insets(2, 2, 0, 3));
-
+                        HBox.setMargin(mailIcon, new Insets(2, 4, 0, 2));
                         setGraphic(managebtn);
 
                         setText(null);

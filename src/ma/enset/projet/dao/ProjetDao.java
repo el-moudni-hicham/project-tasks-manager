@@ -6,5 +6,7 @@ import java.util.List;
 
 public interface ProjetDao extends Dao<Projet>{
     List<Projet> findByMotCle(String mc);
+    int countProjects();
+    public boolean deletePrj(int id);
 
 }
