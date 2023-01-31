@@ -48,8 +48,6 @@ public class MailController {
             throw new RuntimeException(e);
         }
 
-        //final String username = "hichamlmodni@gmail.com";
-        //final String password = "pyoxoiuicfspilbd";
         final String username = "email";
         final String password = "password";
         Properties prop = new Properties();
