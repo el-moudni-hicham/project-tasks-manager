@@ -1,11 +1,12 @@
-# Projects Tasks Manager
+# Project Tasks Manager
 
 > Project Description 
 ```
-This is a Java desktop application developed using JavaFX and MySQL that helps in managing project tasks, resources,
-and planning through a Gantt chart. With this application, users can easily manage project tasks, track their 
-progress, allocate resources efficiently, and visualize their project timeline using Gantt charts. The application 
-provides an intuitive user interface and enables users to streamline their project management processes effectively.
+This is a Java desktop application developed using JavaFX and MySQL that helps in managing 
+project tasks, resources, and planning through a Gantt chart. With this application, users 
+can easily manage project tasks, track their progress, allocate resources efficiently, and 
+visualize their project timeline using Gantt charts. The application provides an intuitive 
+user interface and enables users to streamline their project management processes effectively.
 ``` 
 
 > Video Demonstration 
