@@ -8,6 +8,9 @@ can easily manage project tasks, track their progress, allocate resources effici
 visualize their project timeline using Gantt charts. The application provides an intuitive 
 user interface and enables users to streamline their project management processes effectively.
 ``` 
+> Report
+
+[RAPPORT.pdf](https://github.com/el-moudni-hicham/project-tasks-manager/files/11470498/RAPPORT.pdf)
 
 > Video Demonstration 
 
