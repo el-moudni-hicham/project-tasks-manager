@@ -10,7 +10,7 @@ user interface and enables users to streamline their project management processe
 ``` 
 > Report
 
-[RAPPORT.pdf](https://github.com/el-moudni-hicham/project-tasks-manager/files/11470498/RAPPORT.pdf)
+[Project Report PDF](https://github.com/el-moudni-hicham/project-tasks-manager/files/11470498/RAPPORT.pdf)
 
 > Video Demonstration 
 
